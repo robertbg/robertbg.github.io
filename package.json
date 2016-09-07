@@ -1,0 +1,23 @@
+{
+  "name": "robertbg.github.io",
+  "version": "1.0.0",
+  "description": "Personal Website of Rob Barns-Graham",
+  "main": "index.html",
+  "scripts": {
+    "start": "static -p 3000",
+    "sass-watch": "node-sass src/scss/style.scss -o dist/css -w src/scss/**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertbg/robertbg.github.io.git"
+  },
+  "author": "Rob Barns-Graham",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/robertbg/robertbg.github.io/issues"
+  },
+  "homepage": "https://github.com/robertbg/robertbg.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^3.9.3"
+  }
+}
