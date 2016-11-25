@@ -4,8 +4,7 @@
   "description": "Personal Website of Rob Barns-Graham",
   "main": "index.html",
   "scripts": {
-    "start": "static -p 3000",
-    "sass-watch": "node-sass src/scss/style.scss -o dist/css -w src/scss/**/*.scss"
+    "watch": "node-sass scss/style.scss -o dist -w scss/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,6 @@
   "homepage": "https://github.com/robertbg/robertbg.github.io#readme",
   "devDependencies": {
     "node-sass": "^3.9.3"
-  }
+  },
+  "dependencies": {}
 }

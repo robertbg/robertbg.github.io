@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Montserrat Black';
+  src: url("../fonts/Montserrat-Black.eot");
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.ttf") format("truetype"), url("../fonts/Montserrat-Black.svg#Montserrat-Black") format("svg"), url("../fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Regular.eot");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans.woff") format("woff"), url("../fonts/OpenSans.ttf") format("truetype"), url("../fonts/OpenSans.svg#OpenSans") format("svg"), url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Bold.eot");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg"), url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: 700;
+  font-style: normal; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  line-height: 1.2rem;
+  color: #302d3b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; }
+
+body {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  display: flex;
+  position: relative;
+  background: #eac60e;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column; }
+  .header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .1;
+    z-index: 1;
+    background: url("../images/hero.jpg") no-repeat center center;
+    width: 100%;
+    height: 100%;
+    content: ''; }
+  @media screen and (min-width: 768px) {
+    .header {
+      background: none;
+      text-align: left;
+      flex-direction: row; }
+      .header::before {
+        display: none; } }
+
+.header__left {
+  position: relative;
+  z-index: 2;
+  padding: 20px; }
+  @media screen and (min-width: 768px) {
+    .header__left {
+      background: url("../images/hero.jpg") no-repeat center center;
+      width: 35%;
+      height: 100%; }
+      .header__left::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: rgba(48, 45, 59, 0.9);
+        width: 100%;
+        height: 100%;
+        content: ''; } }
+  @media screen and (min-width: 1024px) {
+    .header__left {
+      width: 45%; } }
+
+.header__logo {
+  position: relative;
+  transform: rotate(-5deg);
+  transition: transform .3s;
+  z-index: 3;
+  margin-top: 20px;
+  width: 200px;
+  fill: #302d3b; }
+  .header__logo .logo__dot {
+    fill: #fff; }
+  @media screen and (min-width: 374px) {
+    .header__logo {
+      margin-top: 40px; } }
+  @media screen and (min-width: 768px) {
+    .header__logo {
+      margin-top: 0;
+      width: 80px;
+      fill: #fff; }
+      .header__logo .logo__dot {
+        fill: #eac60e; }
+      .header__logo:hover {
+        transform: rotate(0deg); } }
+
+.header__right {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  flex-grow: 1; }
+  @media screen and (min-width: 374px) {
+    .header__right {
+      padding-top: 40px; } }
+  @media screen and (min-width: 768px) {
+    .header__right {
+      background-color: #eac60e;
+      padding-top: 20px;
+      width: 65%;
+      height: 100%;
+      align-items: center;
+      justify-content: center; } }
+  @media screen and (min-width: 1024px) {
+    .header__right {
+      width: 55%; } }
+
+.header__title {
+  text-transform: uppercase;
+  line-height: 2.2rem;
+  font-family: "Montserrat Black", sans-serif;
+  font-size: 2rem; }
+  .header__title span {
+    color: #fff; }
+  @media screen and (min-width: 1024px) {
+    .header__title {
+      line-height: 3.2rem;
+      font-size: 3rem; } }
+
+.header__tagline {
+  margin-top: 10px;
+  line-height: 1rem;
+  font-size: 0.8rem; }
+  @media screen and (min-width: 1024px) {
+    .header__tagline {
+      line-height: 1.2rem;
+      font-size: 16px; } }
+
+.header__links {
+  margin-top: 40px;
+  text-transform: uppercase;
+  line-height: 1rem;
+  font-size: 0.8rem; }
+  .header__links a {
+    padding-bottom: 1px;
+    color: #302d3b;
+    font-weight: 700; }
+    .header__links a:hover {
+      border-bottom: 2px solid #302d3b; }
+  @media screen and (min-width: 1024px) {
+    .header__links {
+      line-height: 1.2rem;
+      font-size: 16px; } }
+
+.header__email {
+  margin-top: 40px; }
