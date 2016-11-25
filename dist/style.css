@@ -1,26 +1,23 @@
 @font-face {
   font-family: 'Montserrat Black';
-  src: url("../fonts/Montserrat-Black.eot");
-  src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.ttf") format("truetype"), url("../fonts/Montserrat-Black.svg#Montserrat-Black") format("svg"), url("../fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype");
+  src: url("dist/fonts/Montserrat-Black.eot");
+  src: url("dist/fonts/Montserrat-Black.woff2") format("woff2"), url("dist/fonts/Montserrat-Black.woff") format("woff"), url("dist/fonts/Montserrat-Black.ttf") format("truetype"), url("dist/fonts/Montserrat-Black.svg#Montserrat-Black") format("svg"), url("dist/fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Regular.eot");
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans.woff") format("woff"), url("../fonts/OpenSans.ttf") format("truetype"), url("../fonts/OpenSans.svg#OpenSans") format("svg"), url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("dist/fonts/OpenSans-Regular.eot");
+  src: url("dist/fonts/OpenSans-Regular.woff2") format("woff2"), url("dist/fonts/OpenSans.woff") format("woff"), url("dist/fonts/OpenSans.ttf") format("truetype"), url("dist/fonts/OpenSans.svg#OpenSans") format("svg"), url("dist/fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Bold.eot");
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg"), url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype");
+  src: url("dist/fonts/OpenSans-Bold.eot");
+  src: url("dist/fonts/OpenSans-Bold.woff2") format("woff2"), url("dist/fonts/OpenSans-Bold.woff") format("woff"), url("dist/fonts/OpenSans-Bold.ttf") format("truetype"), url("dist/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg"), url("dist/fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype");
   font-weight: 700;
   font-style: normal; }
-
-* {
-  box-sizing: border-box; }
 
 html {
   line-height: 1.2rem;
@@ -33,6 +30,8 @@ html {
 
 body {
   margin: 0; }
+  body * {
+    box-sizing: border-box; }
 
 a {
   text-decoration: none; }
@@ -51,7 +50,7 @@ a {
     left: 20px;
     opacity: .1;
     z-index: 2;
-    background: url("../images/hero.jpg") no-repeat center center;
+    background: url("dist/images/hero.jpg") no-repeat center center;
     background-size: cover;
     width: calc(100% - 40px);
     height: calc(100% - 40px);
@@ -80,7 +79,7 @@ a {
   padding: 20px; }
   @media screen and (min-width: 768px) {
     .header__left {
-      background: url("../images/hero.jpg") no-repeat center center;
+      background: url("dist/images/hero.jpg") no-repeat center center;
       background-size: cover;
       width: 45%;
       height: 100%; }

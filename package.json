@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Personal Website of Rob Barns-Graham",
   "main": "index.html",
-  "scripts": {
-    "watch": "node-sass scss/style.scss -o dist -w scss/**/*.scss"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/robertbg/robertbg.github.io.git"
@@ -17,7 +14,8 @@
   },
   "homepage": "https://github.com/robertbg/robertbg.github.io#readme",
   "devDependencies": {
-    "node-sass": "^3.9.3"
-  },
-  "dependencies": {}
+    "gulp": "^3.9.1",
+    "gulp-inline-source": "^3.0.0",
+    "gulp-sass": "^2.3.2"
+  }
 }
