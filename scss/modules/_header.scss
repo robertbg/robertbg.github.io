@@ -52,6 +52,7 @@
 
   @media screen and (min-width: $tablet) {
     background: url('../images/hero.jpg') no-repeat center center;
+    background-size: cover;
     width: 45%;
     height: 100%;
 

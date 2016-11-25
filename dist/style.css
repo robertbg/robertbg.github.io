@@ -80,6 +80,7 @@ a {
   @media screen and (min-width: 768px) {
     .header__left {
       background: url("../images/hero.jpg") no-repeat center center;
+      background-size: cover;
       width: 45%;
       height: 100%; }
       .header__left::before {
