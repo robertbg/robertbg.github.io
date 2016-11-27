@@ -55,7 +55,6 @@
     background: url('dist/images/hero.jpg') no-repeat center center;
     background-size: cover;
     width: 45%;
-    height: 100%;
     min-height: 100%;
 
     &::before {
@@ -113,7 +112,6 @@
     background-color: $highlight-color;
     padding-top: 20px;
     width: 55%;
-    height: 100%;
     min-height: 100%;
     align-items: center;
     justify-content: center;
