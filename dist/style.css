@@ -202,8 +202,9 @@ a {
   .header__brand svg {
     opacity: .2;
     width: auto;
-    height: 30px;
+    height: 20px;
     fill: #fff; }
     @media screen and (min-width: 768px) {
       .header__brand svg {
+        height: 30px;
         fill: #302d3b; } }

@@ -213,10 +213,11 @@
   svg {
     opacity: .2;
     width: auto;
-    height: 30px;
+    height: 20px;
     fill: $light-color;
 
     @media screen and (min-width: $tablet) {
+      height: 30px;
       fill: $dark-color;
     }
   }
