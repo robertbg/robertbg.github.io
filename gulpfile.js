@@ -4,6 +4,7 @@ const sass = require('gulp-sass');
 const inlineSource = require('gulp-inline-source');
 const svgmin = require('gulp-svgmin');
 const injectSvg = require('gulp-inject-svg');
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('sass', () => gulp.src('./src/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
@@ -27,6 +28,9 @@ gulp.task('inject-svg', ['inject-html'], () => gulp.src('index.html')
   .pipe(gulp.dest(''))
 );
 
-gulp.task('watch', () => gulp.watch('./src/**/*.*', ['inject-svg']));
+gulp.task('default', ['inject-svg'], () => gulp.src('index.html')
+  .pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
+  .pipe(gulp.dest(''))
+);
 
-gulp.task('default', ['inject-svg']);
+gulp.task('watch', () => gulp.watch('./src/**/*.*', ['default']));

@@ -15,9 +15,12 @@
   "homepage": "https://github.com/robertbg/robertbg.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-inline-source": "^3.0.0",
     "gulp-inject-svg": "^0.1.9",
+    "gulp-inline-source": "^3.0.0",
     "gulp-sass": "^2.3.2",
     "gulp-svgmin": "^1.2.3"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^3.0.0"
   }
 }
