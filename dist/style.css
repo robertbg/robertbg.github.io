@@ -191,20 +191,24 @@ a {
   margin: 40px 0 20px;
   padding: 0;
   list-style: none;
-  flex-flow: row wrap;
-  justify-content: space-between; }
+  flex-flow: row wrap; }
   @media screen and (min-width: 768px) {
     .header__brands {
-      margin-top: 80px; } }
+      margin-top: 60px; } }
 
 .header__brand {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  padding: 0 10px 0 0;
+  flex-basis: 50%; }
   .header__brand svg {
     opacity: .2;
     width: auto;
+    max-width: 100%;
     height: 20px;
     fill: #fff; }
     @media screen and (min-width: 768px) {
       .header__brand svg {
-        height: 30px;
         fill: #302d3b; } }
+  @media screen and (min-width: 768px) {
+    .header__brand {
+      flex-basis: 33.333333%; } }
