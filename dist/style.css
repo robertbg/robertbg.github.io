@@ -38,7 +38,7 @@ a {
 
 .only__desktop {
   display: none; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .only__desktop {
       display: block; } }
 
@@ -215,6 +215,6 @@ a {
     @media screen and (min-width: 768px) {
       .header__brand svg {
         fill: #302d3b; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .header__brand {
       flex-basis: 33.333333%; } }
