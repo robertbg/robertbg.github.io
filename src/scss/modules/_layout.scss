@@ -22,3 +22,11 @@ body {
 a {
   text-decoration: none;
 }
+
+.only__desktop {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}

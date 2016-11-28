@@ -36,6 +36,12 @@ body {
 a {
   text-decoration: none; }
 
+.only__desktop {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .only__desktop {
+      display: block; } }
+
 .header {
   display: flex;
   position: relative;
