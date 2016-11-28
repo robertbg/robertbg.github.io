@@ -183,3 +183,27 @@ a {
 
 .header__email {
   margin-top: 40px; }
+
+.header__brands {
+  display: flex;
+  position: relative;
+  z-index: 4;
+  margin: 40px 0 20px;
+  padding: 0;
+  list-style: none;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  @media screen and (min-width: 768px) {
+    .header__brands {
+      margin-top: 80px; } }
+
+.header__brand {
+  margin-bottom: 10px; }
+  .header__brand svg {
+    opacity: .2;
+    width: auto;
+    height: 30px;
+    fill: #fff; }
+    @media screen and (min-width: 768px) {
+      .header__brand svg {
+        fill: #302d3b; } }
