@@ -172,18 +172,20 @@
 .header__links {
   margin-top: 40px;
   text-transform: uppercase;
+  line-height: $medium-line-height;
+  font-size: $medium-font-size;
 
   a {
     padding-bottom: 1px;
-    color: $light-color;
+    color: $highlight-color;
     font-weight: 700;
-
-    &:hover {
-      border-bottom: 2px solid $dark-color;
-    }
 
     @media screen and (min-width: $tablet) {
       color: $dark-color;
+
+      &:hover {
+        border-bottom: 2px solid $dark-color;
+      }
     }
   }
 }

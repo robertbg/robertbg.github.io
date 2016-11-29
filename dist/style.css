@@ -20,10 +20,10 @@
   font-style: normal; }
 
 html {
-  line-height: 1.2rem;
+  line-height: 1.4rem;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 13px; }
   @media screen and (min-width: 768px) {
     html {
       color: #302d3b; } }
@@ -35,6 +35,9 @@ body {
 
 a {
   text-decoration: none; }
+
+strong {
+  font-weight: 700; }
 
 .only__desktop {
   display: none; }
@@ -152,7 +155,7 @@ a {
 
 .header__title {
   text-transform: uppercase;
-  line-height: 2.2rem;
+  line-height: 2.4rem;
   font-family: "Montserrat Black", sans-serif;
   font-size: 2rem; }
   .header__title span {
@@ -162,30 +165,32 @@ a {
       color: #fff; } }
   @media screen and (min-width: 1024px) {
     .header__title {
-      line-height: 3.2rem;
+      line-height: 3.4rem;
       font-size: 3rem; } }
 
 .header__tagline {
   margin-top: 10px;
-  line-height: 1rem;
-  font-size: 0.8rem; }
+  line-height: 1.4rem;
+  font-size: 0.9rem; }
   @media screen and (min-width: 1024px) {
     .header__tagline {
-      line-height: 1.2rem;
-      font-size: 16px; } }
+      line-height: 1.4rem;
+      font-size: 13px; } }
 
 .header__links {
   margin-top: 40px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.4rem;
+  font-size: 1.2rem; }
   .header__links a {
     padding-bottom: 1px;
-    color: #fff;
+    color: #eac60e;
     font-weight: 700; }
-    .header__links a:hover {
-      border-bottom: 2px solid #302d3b; }
     @media screen and (min-width: 768px) {
       .header__links a {
-        color: #302d3b; } }
+        color: #302d3b; }
+        .header__links a:hover {
+          border-bottom: 2px solid #302d3b; } }
 
 .header__email {
   margin-top: 40px; }
