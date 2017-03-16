@@ -104,7 +104,6 @@ strong {
 
 .header__logo {
   position: relative;
-  transform: rotate(-5deg);
   transition: transform .3s;
   z-index: 4;
   margin-top: 20px;
@@ -118,9 +117,7 @@ strong {
   @media screen and (min-width: 768px) {
     .header__logo {
       margin-top: 0;
-      width: 100px; }
-      .header__logo:hover {
-        transform: rotate(0deg); } }
+      width: 75px; } }
 
 .header__right {
   display: flex;

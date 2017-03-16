@@ -72,7 +72,6 @@
 
 .header__logo {
   position: relative;
-  transform: rotate(-5deg);
   transition: transform .3s;
   z-index: 4;
   margin-top: 20px;
@@ -89,11 +88,7 @@
 
   @media screen and (min-width: $tablet) {
     margin-top: 0;
-    width: 100px;
-
-    &:hover {
-      transform: rotate(0deg);
-    }
+    width: 75px;
   }
 }
 
