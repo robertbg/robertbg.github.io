@@ -22,6 +22,8 @@ body {
 }
 
 a {
+  color: $dark-color;
+  transition: all .3s;
   text-decoration: none;
 }
 

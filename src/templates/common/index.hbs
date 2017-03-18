@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Rob Barns-Graham - Creative UI & Full-Stack Javascript Developer</title>
+    <title>{{attributes.title}}</title>
     <meta name="description" content="Available now for freelance, consultancy and contracts on site in London / South East, UK or remotely anywhere in the world.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Open+Sans:300,700" rel="stylesheet">
-    <link inline href="../dist/home.css" rel="stylesheet" type="text/css">
+    <link inline href="dist/home.css" rel="stylesheet" type="text/css">
     <link rel="canonical" href="https://robbg.io" />
   </head>
   <body>
 
     <nav class="nav nav-inverse">
-      <img src="src/svg/logo.svg" class="nav__logo">
+      <img src="/src/svg/logo.svg" class="nav__logo">
       <div class="nav__menu">
         <ul class="nav__list">
           <li><a class="js-internal" href="#about">About</a></li>
           <li><a class="js-internal"href="#contact">Contact</a></li>
-          <li><a href="writing.html">Writing</a></li>
+          <li><a href="blog">Writing</a></li>
         </ul>
-        <img src="src/svg/menu.svg" class="nav__icon">
+        <img src="/src/svg/menu.svg" class="nav__icon">
       </div>
     </nav>
 
     <header class="splash">
       <div class="splash__left">\
-        <img src="src/svg/logo.svg" class="splash__logo">
+        <img src="/src/svg/logo.svg" class="splash__logo">
       </div>
       <div class="splash__right">
         <div class="splash__content">
@@ -37,31 +37,31 @@
 
           <ul class="splash__brands">
             <li class="splash__brand">
-              <img src="src/svg/playstation.svg" alt="Sony Playstation" />
+              <img src="/src/svg/playstation.svg" alt="Sony Playstation" />
             </li>
             <li class="splash__brand">
-              <img src="src/svg/cosmo.svg" alt="Cosmopolitan UK" />
+              <img src="/src/svg/cosmo.svg" alt="Cosmopolitan UK" />
             </li>
             <li class="splash__brand">
-              <img src="src/svg/digitalspy.svg" alt="Digital Spy" />
+              <img src="/src/svg/digitalspy.svg" alt="Digital Spy" />
             </li>
             <li class="splash__brand">
-              <img src="src/svg/sega.svg" alt="SEGA" />
+              <img src="/src/svg/sega.svg" alt="SEGA" />
             </li>
             <li class="splash__brand">
-              <img src="src/svg/footballmanager.svg" alt="Football Manager" />
+              <img src="/src/svg/footballmanager.svg" alt="Football Manager" />
             </li>
             <li class="splash__brand">
-              <img src="src/svg/citi.svg" alt="Citibank" />
+              <img src="/src/svg/citi.svg" alt="Citibank" />
             </li>
             <li class="splash__brand">
-              <img src="src/svg/asda.svg" alt="ASDA" />
+              <img src="/src/svg/asda.svg" alt="ASDA" />
             </li>
             <li class="splash__brand only__desktop">
-              <img src="src/svg/hp.svg" alt="Hewlett Packard" />
+              <img src="/src/svg/hp.svg" alt="Hewlett Packard" />
             </li>
             <li class="splash__brand">
-              <img src="src/svg/netflix.svg" alt="Netflix" />
+              <img src="/src/svg/netflix.svg" alt="Netflix" />
             </li>
           </ul>
         </div>
@@ -79,12 +79,12 @@
     <section class="contact" id="contact">
       <div class="contact__content">
         <h1 class="heading">Get in <span>Touch</span></h1>
-        <a href="mailto:rob.bg@me.com" class="button">Email Me</a>
+        <a href="mailto:{{contact}}" class="button">Email Me</a>
         <a href="documents/RobBGCV.pdf" target="_blank" class="button">Download Cv</a>
         <ul class="social">
-          <li><a href="https://github.com/robertbg" class="social__link" target="_blank"><img class="social__icon social__icon-github" src="src/svg/github.svg" alt="Github" /></a></li>
-          <li><a href="https://twitter.com/robbg83" class="social__link" target="_blank"><img class="social__icon social__icon-twitter" src="src/svg/twitter.svg" alt="Github" /></a></li>
-          <li><a href="https://uk.linkedin.com/in/robbarnsgraham" class="social__link" target="_blank"><img class="social__icon social__icon-linkedin" src="src/svg/linkedin.svg" alt="Github" /></a></li>
+          <li><a href="https://github.com/robertbg" class="social__link" target="_blank"><img class="social__icon social__icon-github" src="/src/svg/github.svg" alt="Github" /></a></li>
+          <li><a href="https://twitter.com/robbg83" class="social__link" target="_blank"><img class="social__icon social__icon-twitter" src="/src/svg/twitter.svg" alt="Github" /></a></li>
+          <li><a href="https://uk.linkedin.com/in/robbarnsgraham" class="social__link" target="_blank"><img class="social__icon social__icon-linkedin" src="/src/svg/linkedin.svg" alt="Github" /></a></li>
         </ul>
       </div>
     </section>
@@ -94,14 +94,14 @@
         <ul class="footer__list">
           <li><a class="js-internal" href="#about">About</a></li>
           <li><a class="js-internal" href="#contact">Contact</a></li>
-          <li><a href="writing.html">Writing</a></li>
+          <li><a href="blog">Writing</a></li>
         </ul>
         <p class="footer__copyright">&copy; 2017 RBG Digital Ltd.</p>
         <p class="footer__subline">Company Number: 9390203</p>
       </div>
     </footer>
 
-    <script src="dist/bundle.js" />
+    <script inline src="dist/bundle.js" />
 
   </body>
 </html>

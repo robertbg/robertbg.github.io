@@ -11,9 +11,6 @@
   border-top: 1px solid transparentize($dark-color, .95);
 
   a {
-    color: $dark-color;
-    transition: color .3s;
-
     &:hover {
       color: $highlight-color;
     }

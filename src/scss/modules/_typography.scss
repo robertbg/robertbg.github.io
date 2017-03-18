@@ -4,7 +4,7 @@
   font-family: $header-font-family;
   font-size: $medium-font-size;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     line-height: $largest-line-height;
     font-size: $largest-font-size;
   }

@@ -15,6 +15,8 @@ body {
     box-sizing: border-box; }
 
 a {
+  color: #302d3b;
+  transition: all .3s;
   text-decoration: none; }
 
 strong {
@@ -31,7 +33,7 @@ strong {
   line-height: 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 24px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     .heading {
       line-height: 50px;
       font-size: 42px; } }
@@ -99,11 +101,8 @@ strong {
   left: 50px;
   right: 50px;
   justify-content: space-between; }
-  .nav a {
-    color: #302d3b;
-    transition: color .3s; }
-    .nav a:hover {
-      color: #eac60e; }
+  .nav a:hover {
+    color: #eac60e; }
   .nav-inverse a:hover {
     color: #fff; }
   .nav-inverse .nav__logo {
@@ -392,11 +391,8 @@ strong {
   padding: 0 20px 100px 20px;
   text-align: center;
   border-top: 1px solid rgba(48, 45, 59, 0.05); }
-  .footer a {
-    color: #302d3b;
-    transition: color .3s; }
-    .footer a:hover {
-      color: #eac60e; }
+  .footer a:hover {
+    color: #eac60e; }
   .footer-inverse {
     color: #fff;
     border: 0; }
@@ -451,7 +447,7 @@ strong {
   opacity: 0.6; }
 
 .title {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, white 100%), url("dist/images/blogbg.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, white 100%), url("/dist/images/blogbg.jpg") no-repeat center center;
   background-size: cover;
   height: 800px;
   text-align: center;
