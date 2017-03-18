@@ -423,7 +423,7 @@ strong {
   background-size: cover;
   height: 800px;
   text-align: center;
-  padding-top: 120px; }
+  padding-top: 50px; }
 
 .title__category {
   text-transform: uppercase;
@@ -436,3 +436,11 @@ strong {
 .title__author {
   margin: 40px 0 10px;
   opacity: .4; }
+
+.title__logo {
+  width: 75px;
+  height: 30px;
+  fill: #302d3b;
+  margin-bottom: 40px; }
+  .title__logo .logo__dot {
+    fill: #eac60e; }

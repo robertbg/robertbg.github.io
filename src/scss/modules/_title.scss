@@ -9,7 +9,7 @@
   background-size: cover;
   height: 800px;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 .title__category {
@@ -27,4 +27,15 @@
 .title__author {
   margin: 40px 0 10px;
   opacity: .4;
+}
+
+.title__logo {
+  width: 75px;
+  height: 30px;
+  fill: $dark-color;
+  margin-bottom: 40px;
+
+  .logo__dot {
+    fill: $highlight-color;
+  }
 }
