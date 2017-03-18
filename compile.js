@@ -2,6 +2,7 @@ const fs = require('fs-extended');
 const fm = require('front-matter');
 const handlebars = require('handlebars');
 const dateformat = require('handlebars-dateformat');
+const moment = require('moment');
 const dir = require('node-dir');
 const mkpath = require('mkpath');
 const marked = require('marked');
@@ -61,7 +62,11 @@ const buildSingleHTML = (content) => {
   globalItems.push(contentData);
 
   // HTML Version Paths
-  const htmlPath = paths.buildPath + 'blog/' + contentData.attributes.fileName;
+  const htmlPath = paths.buildPath +
+  'blog/' + 
+  moment(contentData.attributes.date).format('YYYY-MM-DD') + 
+  '-' +
+  contentData.attributes.fileName;
   const htmlTemplate = `${paths.templatePath}/${contentData.attributes.template}`;
 
   // Render the HTML content and write to file
@@ -113,7 +118,12 @@ const buildBlogHTML = () => {
   const globalData = fm(content);
   globalData.bodyFormatted = marked(globalData.body, markedOpts);
   globalData.items = globalItems
-    .map(addClassesArray);
+    .map(addClassesArray)
+    .sort(function(a, b) {
+      a = new Date(a.date);
+      b = new Date(b.date);
+      return a > b ? -1 : a < b ? 1 : 0;
+    });
 
   const htmlTemplate = `${paths.templatePath}/${globalData.attributes.template}`;
   let HTML = renderTemplate(htmlTemplate, globalData);

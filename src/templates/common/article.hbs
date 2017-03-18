@@ -44,7 +44,7 @@
 
     <script>
     var disqus_config = function () {
-      this.page.url = 'http://robbg.io/blog/{{attributes.fileName}}';
+      this.page.url = 'https://robbg.io/blog/{{dateFormat attributes.date "YYYY-MM-DD"}}-{{attributes.fileName}}';
       this.page.identifier = '{{dateFormat attributes.date "YYYY-MM-DD"}}-{{attributes.fileName}}';
     };
     (function() {
