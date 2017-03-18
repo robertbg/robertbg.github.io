@@ -33,6 +33,10 @@ strong {
     .heading {
       line-height: 50px;
       font-size: 42px; } }
+  .heading-small {
+    line-height: 30px;
+    font-size: 24px;
+    margin: 0; }
 
 .button {
   display: inline-block;
@@ -93,11 +97,15 @@ strong {
   left: 50px;
   right: 50px;
   justify-content: space-between; }
-  .nav-inverse a {
+  .nav a {
     color: #302d3b;
     transition: color .3s; }
-    .nav-inverse a:hover {
-      color: #fff; }
+    .nav a:hover {
+      color: #eac60e; }
+  .nav-inverse a:hover {
+    color: #fff; }
+  .nav-inverse .nav__logo {
+    fill: #fff; }
 
 .nav__menu {
   display: flex; }
@@ -106,7 +114,7 @@ strong {
   position: relative;
   width: 75px;
   height: 30px;
-  fill: #fff; }
+  fill: #302d3b; }
   .nav__logo .logo__dot {
     fill: #eac60e; }
   @media screen and (min-width: 374px) {
@@ -320,7 +328,7 @@ strong {
   flex-direction: column;
   padding: 0 20px;
   text-align: center;
-  height: 500px;
+  height: 450px;
   color: #fff; }
   .contact::before {
     position: absolute;
@@ -359,9 +367,16 @@ strong {
   justify-content: center;
   flex-direction: column;
   padding: 0 20px 20px 20px;
-  text-align: center; }
+  text-align: center;
+  border-top: 1px solid rgba(48, 45, 59, 0.05); }
+  .footer a {
+    color: #302d3b;
+    transition: color .3s; }
+    .footer a:hover {
+      color: #eac60e; }
   .footer-inverse {
-    color: #fff; }
+    color: #fff;
+    border: 0; }
     .footer-inverse::after {
       position: absolute;
       top: 0;
@@ -373,10 +388,7 @@ strong {
       height: calc(100% - 20px);
       content: ''; }
     .footer-inverse a {
-      color: #fff;
-      transition: color .3s; }
-      .footer-inverse a:hover {
-        color: #eac60e; }
+      color: #fff; }
 
 .footer__list {
   display: flex;
@@ -404,3 +416,10 @@ strong {
   font-size: 14px;
   line-height: 20px;
   opacity: 0.6; }
+
+.title {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, white 100%), url("dist/images/blogbg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+  padding-top: 120px; }

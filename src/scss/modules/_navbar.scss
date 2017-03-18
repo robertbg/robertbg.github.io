@@ -9,14 +9,24 @@
   right: 50px;
   justify-content: space-between;
 
+  a {
+    color: $dark-color;
+    transition: color .3s;
+
+    &:hover {
+      color: $highlight-color;
+    }
+  }
+
   &-inverse {
     a {
-      color: $dark-color;
-      transition: color .3s;
-
       &:hover {
         color: $light-color;
       }
+    }
+
+    .nav__logo {
+      fill: $light-color;
     }
   }
 }
@@ -29,7 +39,7 @@
   position: relative;
   width: 75px;
   height: 30px;
-  fill: $light-color;
+  fill: $dark-color;
 
   .logo__dot {
     fill: $highlight-color;

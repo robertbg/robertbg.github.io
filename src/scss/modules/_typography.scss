@@ -8,4 +8,10 @@
     line-height: $largest-line-height;
     font-size: $largest-font-size;
   }
+
+  &-small {
+    line-height: $medium-line-height;
+    font-size: $medium-font-size;
+    margin: 0;
+  }
 }

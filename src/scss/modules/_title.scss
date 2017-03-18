@@ -1,0 +1,13 @@
+.title {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, .85) 0%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('dist/images/blogbg.jpg'
+  ) no-repeat center center;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+  padding-top: 120px;
+}

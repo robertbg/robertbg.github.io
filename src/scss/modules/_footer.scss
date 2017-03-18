@@ -8,9 +8,20 @@
   flex-direction: column;
   padding: 0 20px 20px 20px;
   text-align: center;
+  border-top: 1px solid transparentize($dark-color, .95);
+
+  a {
+    color: $dark-color;
+    transition: color .3s;
+
+    &:hover {
+      color: $highlight-color;
+    }
+  }
 
   &-inverse {
     color: $light-color;
+    border: 0;
 
     &::after {
       position: absolute;
@@ -26,11 +37,6 @@
 
     a {
       color: $light-color;
-      transition: color .3s;
-
-      &:hover {
-        color: $highlight-color;
-      }
     }
   }
 }

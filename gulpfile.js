@@ -12,9 +12,7 @@ gulp.task('sass', () => gulp.src('./src/scss/**/*.scss')
 );
 
 gulp.task('inject-html', ['sass'], () => gulp.src('./src/*.html')
-  .pipe(inlineSource({
-      compress: true
-  }))
+  .pipe(inlineSource({ compress: true }))
   .pipe(gulp.dest(''))
 );
 
@@ -23,13 +21,13 @@ gulp.task('min-svg', () =>  gulp.src('./svg/*.svg')
   .pipe(gulp.dest('./svg'))
 );
 
-gulp.task('inject-svg', ['inject-html'], () => gulp.src('index.html')
+gulp.task('inject-svg', ['inject-html'], () => gulp.src('./*.html')
   .pipe(injectSvg())
   .pipe(gulp.dest(''))
 );
 
-gulp.task('default', ['inject-svg'], () => gulp.src('index.html')
-  .pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
+gulp.task('default', ['inject-svg'], () => gulp.src('./*.html')
+  .pipe(htmlmin({ collapseWhitespace: true, minifyJS: true }))
   .pipe(gulp.dest(''))
 );
 
