@@ -1,6 +1,7 @@
 const fs = require('fs-extended');
 const fm = require('front-matter');
 const handlebars = require('handlebars');
+const dateformat = require('handlebars-dateformat');
 const dir = require('node-dir');
 const mkpath = require('mkpath');
 const marked = require('marked');
@@ -36,6 +37,10 @@ const registerPartials = () => {
     handlebars.registerPartial(filename, content);
   });
 };
+
+const registerHelpers = () => {
+  handlebars.registerHelper('dateFormat', dateformat);
+}
 
 // Renders the template using Handlebars
 const renderTemplate = (templatePath, viewData) => {
@@ -125,6 +130,7 @@ const buildMainPages = () => {
 // Recursively searches through the contentPath directory for YAML content files and builds.
 const runApp = () => {
   registerPartials(); // Register Partials
+  registerHelpers(); // Register Helpers
 
   // Uses 'node-dir' to recursively search through the contentPath directory.
   dir.readFiles(

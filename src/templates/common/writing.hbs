@@ -23,7 +23,10 @@
     <section class="previews">
       {{#items}}
       <article class="preview">
-        <date class="preview__date">24 <span>June</span></date>
+        <date class="preview__date">
+          {{dateFormat attributes.date 'DD'}}
+          <span>{{dateFormat attributes.date 'MMM'}}</span>
+        </date>
         <div class="preview__content">
           <a href="/blog/{{attributes.fileName}}" class="preview__link">
             <h2 class="heading heading-medium">{{attributes.title}}</h2>

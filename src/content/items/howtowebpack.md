@@ -3,7 +3,7 @@ template: article.hbs
 fileName: howtowebpack
 stylesheet: writing.css
 title: How to use Webpack
-date: 18th March 2017
+date:	2017-03-16
 preview: > 
     Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Nullam mollis. Ut justo. Suspendisse potenti. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Nullam mollis. Ut justo.
 categories: 
