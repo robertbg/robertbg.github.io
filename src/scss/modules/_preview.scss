@@ -1,6 +1,6 @@
 .previews {
-  margin-top: -550px;
-  padding: 50px;
+  margin: -530px auto 60px;
+  max-width: 780px; 
 }
 
 .preview {
@@ -24,6 +24,7 @@
   padding-right: 20px;
   font-family: $header-font-family;
   font-size: $largest-font-size;
+  opacity: .3;
 
   span {
     display: inline-block;

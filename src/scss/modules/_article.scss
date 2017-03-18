@@ -1,0 +1,50 @@
+.article {
+  margin: -400px auto 60px;
+  max-width: 780px; 
+
+  h2 {
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-family: $header-font-family;
+    line-height: $medium-line-height;
+    font-size: $medium-font-size;
+  }
+
+  p {
+    &:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+  }
+
+  img.left {
+    float: left;
+    width: auto;
+    max-height: 300px;
+    padding: 0 20px 20px 0;
+  }
+
+  img.right {
+    float: right;
+    width: auto;
+    max-height: 300px;
+    padding: 0 0 20px 20px;
+  }
+
+  pre {
+    margin: 30px 0;
+    font-family: 'Consolas', monospace;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 5px;
+    transition: background .3s;
+    background: transparentize($highlight-color, .6);
+
+    &:hover {
+      background: transparentize($highlight-color, .3);
+    }
+  }
+}

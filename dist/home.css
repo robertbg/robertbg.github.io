@@ -2,7 +2,8 @@ html {
   line-height: 26px;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  font-size: 17px; }
+  font-size: 17px;
+  font-weight: 300; }
   @media screen and (min-width: 768px) {
     html {
       color: #302d3b; } }
@@ -33,7 +34,7 @@ strong {
     .heading {
       line-height: 50px;
       font-size: 42px; } }
-  .heading-small {
+  .heading-medium {
     line-height: 30px;
     font-size: 24px;
     margin: 0; }
@@ -423,3 +424,15 @@ strong {
   height: 800px;
   text-align: center;
   padding-top: 120px; }
+
+.title__category {
+  text-transform: uppercase;
+  font-size: 14px; }
+
+.title__heading h1 {
+  margin: 20px auto;
+  width: 465px; }
+
+.title__author {
+  margin: 40px 0 10px;
+  opacity: .4; }

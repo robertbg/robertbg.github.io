@@ -11,3 +11,20 @@
   text-align: center;
   padding-top: 120px;
 }
+
+.title__category {
+  text-transform: uppercase;
+  font-size: $small-font-size;
+}
+
+.title__heading {
+  h1 {
+    margin: 20px auto;
+    width: 465px;
+  }
+}
+
+.title__author {
+  margin: 40px 0 10px;
+  opacity: .4;
+}

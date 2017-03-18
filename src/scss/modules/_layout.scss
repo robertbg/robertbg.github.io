@@ -5,6 +5,7 @@ html {
   color: $light-color;
   font-family: $body-font-family;
   font-size: $base-font-size;
+  font-weight: 300;
 
   @media screen and (min-width: $tablet) {
     color: $dark-color;
