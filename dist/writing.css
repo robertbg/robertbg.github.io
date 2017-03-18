@@ -245,6 +245,9 @@ strong {
     .article a:hover {
       background: rgba(234, 198, 14, 0.7); }
 
+.article__comments {
+  margin-top: 40px; }
+
 .footer {
   position: relative;
   display: flex;
