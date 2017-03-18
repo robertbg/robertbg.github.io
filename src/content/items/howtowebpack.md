@@ -1,6 +1,7 @@
 ---
 template: article.hbs
 fileName: howtowebpack
+stylesheet: writing.css
 title: How to use Webpack
 date: 18th March 2017
 preview: > 

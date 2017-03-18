@@ -137,8 +137,7 @@ strong {
   text-transform: uppercase;
   font-weight: 700;
   margin: 0;
-  padding: 0;
-  margin-right: 40px; }
+  padding: 0; }
   .nav__list li {
     display: inline;
     padding-left: 30px; }
