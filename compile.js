@@ -109,7 +109,7 @@ const buildHomeHTML = () => {
 
 // Build HTML for blog listing page
 const buildBlogHTML = () => {
-  const content = fs.readFileSync(`${paths.globalPath}/writing.md`, { encoding: 'utf8' });
+  const content = fs.readFileSync(`${paths.globalPath}/blog.md`, { encoding: 'utf8' });
   const globalData = fm(content);
   globalData.bodyFormatted = marked(globalData.body, markedOpts);
   globalData.items = globalItems
