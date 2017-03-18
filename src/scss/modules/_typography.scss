@@ -1,8 +1,8 @@
 .heading {
   text-transform: uppercase;
-  line-height: $large-line-height;
+  line-height: $medium-line-height;
   font-family: $header-font-family;
-  font-size: $large-font-size;
+  font-size: $medium-font-size;
 
   @media screen and (min-width: $desktop) {
     line-height: $largest-line-height;

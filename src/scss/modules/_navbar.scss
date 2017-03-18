@@ -3,7 +3,7 @@
 .nav {
   position: absolute;
   z-index: 4;
-  display: flex;
+  display: none;
   top: 50px;
   left: 50px;
   right: 50px;
@@ -28,6 +28,10 @@
     .nav__logo {
       fill: $light-color;
     }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
   }
 }
 

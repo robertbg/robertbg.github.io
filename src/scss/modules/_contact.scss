@@ -6,10 +6,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 20px;
   text-align: center;
-  height: 450px;
   color: $light-color;
+  padding: 40px;
 
   &::before {
     position: absolute;
@@ -33,6 +32,11 @@
     width: calc(100% - 40px);
     height: calc(100%);
     content: '';
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: 450px;
+    padding: 0 20px;
   }
 }
 

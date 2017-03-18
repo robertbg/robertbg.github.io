@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 100px 20px;
   text-align: center;
   border-top: 1px solid transparentize($dark-color, .95);
 
@@ -39,10 +39,15 @@
       color: $light-color;
     }
   }
+
+  @media screen and (min-width: $mobile) {
+    padding-bottom: 20px;
+  }
 }
 
 .footer__list {
   display: flex;
+  flex-direction: column;
   list-style: none;
   font-size: $small-font-size;
   line-height: $small-line-height;
@@ -54,6 +59,15 @@
   li {
     display: inline;
     padding: 0 25px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+
+    li {
+      margin-bottom: 0;
+    }
   }
 }
 

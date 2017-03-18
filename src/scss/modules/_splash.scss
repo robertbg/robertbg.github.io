@@ -5,8 +5,6 @@
   position: relative;
   padding: 20px 20px 0;
   width: 100vw;
-  height: 800px;
-  max-height: 100vw;
   text-align: center;
   flex-direction: column;
   color: $dark-color;
@@ -20,7 +18,7 @@
     background: url('dist/images/hero.jpg') no-repeat center center;
     background-size: cover;
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    height: calc(100% - 20px);
     content: '';
   }
 
@@ -31,7 +29,7 @@
     z-index: 1;
     background-color: $dark-color;
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    height: calc(100% - 20px);
     content: '';
   }
 
@@ -40,11 +38,28 @@
     background: none;
     text-align: left;
     flex-direction: row;
+    height: 800px;
+    max-height: 100vw;
 
     &::before,
     &::after {
       display: none;
     }
+  }
+}
+
+.splash__logo {
+  margin-top: 40px;
+  width: 150px;
+  fill: $light-color;
+
+  .logo__dot {
+    fill: $highlight-color;
+  }
+
+
+  @media screen and (min-width: $tablet) {
+    display: none;
   }
 }
 
@@ -97,12 +112,14 @@
 .splash__content {
   margin: 0 auto;
   max-width: 200px;
+  color: $light-color;
 
   @media screen and (min-width: $mobile) {
     max-width: 300px;
   }
 
   @media screen and (min-width: $tablet) {
+    color: $dark-color;
     margin: 0;
   }
 

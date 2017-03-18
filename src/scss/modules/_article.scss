@@ -1,6 +1,7 @@
 .article {
-  margin: -400px auto 60px;
-  max-width: 780px; 
+  margin: -480px auto 60px;
+  max-width: 780px;
+  padding: 0 20px;
 
   h2 {
     margin-top: 40px;
@@ -19,22 +20,36 @@
   }
 
   img.left {
-    float: left;
-    width: auto;
-    max-height: 300px;
-    padding: 0 20px 20px 0;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+
+    @media screen and (min-width: $tablet) {
+      width: auto;
+      max-height: 300px;
+      padding: 0 20px 20px 0;
+      float: left;
+    }
   }
 
   img.right {
-    float: right;
-    width: auto;
-    max-height: 300px;
-    padding: 0 0 20px 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+
+    @media screen and (min-width: $tablet) {
+      padding: 0 0 20px 20px;
+      width: auto;
+      max-height: 300px;
+      float: right;
+    }
   }
 
   pre {
     margin: 30px 0;
     font-family: 'Consolas', monospace;
+    max-width: 100%;
+    overflow: scroll;
   }
 
   a {
@@ -47,6 +62,12 @@
       background: transparentize($highlight-color, .3);
     }
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: -400px;
+    padding: 0;
+  }
+  
 }
 
 .article__comments {
