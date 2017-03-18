@@ -1,0 +1,13 @@
+@import '../variables';
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.about__content {
+    width: 500px;
+}

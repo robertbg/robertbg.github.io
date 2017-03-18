@@ -1,0 +1,53 @@
+@import '../variables';
+
+.nav {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  position: relative;
+  width: 75px;
+  height: 30px;
+  fill: $light-color;
+
+  .logo__dot {
+    fill: $highlight-color;
+  }
+
+  @media screen and (min-width: $mobile) {
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+    width: 75px;
+  }
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+
+  li {
+    display: inline;
+    padding-left: 15px;
+  }
+
+  &-inverse {
+    a {
+      color: $dark-color;
+      transition: color .3s;
+    }
+  }
+}
