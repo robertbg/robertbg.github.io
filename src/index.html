@@ -11,15 +11,16 @@
     <link rel="canonical" href="https://robbg.io" />
   </head>
   <body>
-    <nav class="nav">
+
+    <nav class="nav nav-inverse">
       <img src="src/svg/logo.svg" class="nav__logo">
-      <ul class="nav__list nav__list-inverse">
-        <li><a href="#">Main</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
+      <ul class="nav__list">
+        <li><a class="js-internal" href="#about">About</a></li>
+        <li><a class="js-internal"href="#contact">Contact</a></li>
+        <li><a href="writing.html">Writing</a></li>
       </ul>
     </nav>
+
     <header class="splash">
       <div class="splash__left"></div>
       <div class="splash__right">
@@ -61,10 +62,34 @@
         </div>
       </div>
     </header>
-    <section class="about">
-      <h1 class="heading">Hello!</h1>
-      <p class="about__content">I am a highly committed, experienced full-stack JavaScript Engineer, Front-End Architect and Web Performance Consultant. Passionate about building great products for the web.</p>
-      <p class="about__content">I have expertise with multiple programming languages and frameworks including: Javascript (ES6, Node, React, Webpack, Gulp), HTML5, CSS (SASS & LESS), SQL (MySQL, PostgreSQL & NoSQL) and more. I am commercially aware, creative, and diligent.</p>
+
+    <section class="about" id="about">
+      <div class="about__content">
+        <h1 class="heading">Hello!</h1>
+        <p>I am a highly committed, experienced full-stack JavaScript Engineer, Front-End Architect and Web Performance Consultant. Passionate about building great products for the web.</p>
+        <p>I have expertise with multiple programming languages and frameworks including: <strong>Javascript</strong> (ES6, Node, React, Webpack, Gulp), <strong>HTML5</strong>, <strong>CSS</strong> (SASS & LESS), <strong>SQL</strong> (MySQL, PostgreSQL & NoSQL) and more. I am commercially aware, creative, and diligent.</p>
+      </div>
     </section>
+
+    <section class="contact" id="contact">
+      <div class="contact__content">
+        <h1 class="heading">Get in <span>Touch</span></h1>
+        <a href="mailto:rob.bg@me.com" class="button">Email Me</a>
+        <a href="documents/RobBGCV.pdf" target="_blank" class="button">Download Cv</a>
+      </div>
+    </section>
+
+    <footer class="footer footer-inverse">
+      <div class="footer__content">
+        <ul class="footer__list">
+          <li><a class="js-internal" href="#about">About</a></li>
+          <li><a class="js-internal" href="#contact">Contact</a></li>
+          <li><a href="writing.html">Writing</a></li>
+        </ul>
+        <p class="footer__copyright">&copy; 2017 RBG Digital Ltd.</p>
+        <p class="footer__subline">Company Number: 9390203</p>
+      </div>
+    </footer>
+
   </body>
 </html>

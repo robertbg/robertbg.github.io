@@ -1,0 +1,69 @@
+@import '../variables';
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+
+  &-inverse {
+    color: $light-color;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1;
+      background-color: $dark-color;
+      width: calc(100% - 40px);
+      height: calc(100% - 20px);
+      content: '';
+    }
+
+    a {
+      color: $light-color;
+      transition: color .3s;
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
+  }
+}
+
+.footer__list {
+  display: flex;
+  list-style: none;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+    padding: 0 15px;
+  }
+}
+
+.footer__content {
+  position: relative;
+  padding: 45px 0;
+  z-index: 4;
+}
+
+.footer__copyright {
+  margin-bottom: 0;
+}
+
+.footer__subline {
+  margin: 0;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  opacity: 0.6;
+}

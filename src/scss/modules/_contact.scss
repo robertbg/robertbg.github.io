@@ -1,6 +1,6 @@
 @import '../variables';
 
-.about {
+.contact {
   position: relative;
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
   flex-direction: column;
   padding: 0 20px;
   text-align: center;
-  height: 600px;
+  height: 400px;
   color: $light-color;
 
   &::before {
@@ -17,7 +17,7 @@
     left: 20px;
     opacity: .1;
     z-index: 2;
-    background: url('dist/images/macbook.jpg') no-repeat center center;
+    background: url('dist/images/london.jpg') no-repeat center center;
     background-size: cover;
     width: calc(100% - 40px);
     height: calc(100%);
@@ -29,19 +29,19 @@
     top: 0;
     left: 20px;
     z-index: 1;
-    background-color: $dark-color;
+    background-color: $highlight-color;
     width: calc(100% - 40px);
     height: calc(100%);
     content: '';
   }
-
-  strong {
-    color: $highlight-color;
-  }
 }
 
-.about__content {
+.contact__content {
   position: relative;
   max-width: 620px;
   z-index: 4;
+
+  span {
+    color: $dark-color;
+  }
 }

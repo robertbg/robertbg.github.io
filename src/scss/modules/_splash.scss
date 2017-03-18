@@ -3,12 +3,13 @@
 .splash {
   display: flex;
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 0;
   width: 100vw;
   height: 800px;
   max-height: 100vw;
   text-align: center;
   flex-direction: column;
+  color: $dark-color;
 
   &::before {
     position: absolute;
