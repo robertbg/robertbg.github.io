@@ -8,7 +8,7 @@
     "url": "git+https://github.com/robertbg/robertbg.github.io.git"
   },
   "scripts": {
-    "sass": "node-sass src/scss/ -o dist/",
+    "sass": "node-sass src/scss/ -o dist/css/",
     "compile": "node ./compile.js",
     "build": "npm run sass && npm run compile && gulp",
     "server": "http-server ./"
