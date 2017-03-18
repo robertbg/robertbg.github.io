@@ -119,9 +119,9 @@ const buildBlogHTML = () => {
   globalData.bodyFormatted = marked(globalData.body, markedOpts);
   globalData.items = globalItems
     .map(addClassesArray)
-    .sort(function(a, b) {
-      a = new Date(a.date);
-      b = new Date(b.date);
+    .sort((a, b) => {
+      a = new Date(a.attributes.date);
+      b = new Date(b.attributes.date);
       return a > b ? -1 : a < b ? 1 : 0;
     });
 
