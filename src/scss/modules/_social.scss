@@ -1,0 +1,46 @@
+@import '../variables';
+
+.social {
+  margin: 45px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+      margin: 0 15px;
+  }
+}
+
+.social__link {
+  height: 36px;
+  width: 36px;
+  background: $dark-color;
+  transition: background .3s;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.social__icon {
+  fill: $light-color;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+
+  &-github {
+    top: 7px;
+    left: 6px;   
+  }
+
+  &-twitter {
+    top: 7px;
+    left: 7px;   
+  }
+
+  &-linkedin {
+    top: 6px;
+    left: 8px;   
+  }
+}

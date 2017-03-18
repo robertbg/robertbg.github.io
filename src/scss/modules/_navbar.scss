@@ -21,6 +21,10 @@
   }
 }
 
+.nav__menu {
+  display: flex;
+}
+
 .nav__logo {
   position: relative;
   width: 75px;
@@ -45,14 +49,23 @@
   display: flex;
   list-style: none;
   font-size: $small-font-size;
-  line-height: $small-line-height;
+  line-height: 30px;
   text-transform: uppercase;
   font-weight: 700;
   margin: 0;
   padding: 0;
+  margin-right: 40px;
 
   li {
     display: inline;
-    padding-left: 15px;
+    padding-left: 30px;
   }
+}
+
+.nav__icon {
+  cursor: pointer;
+  height: 30px;
+  width: 20px;
+  line-height: 30px;
+  fill: $dark-color;
 }

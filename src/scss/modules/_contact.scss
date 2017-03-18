@@ -8,7 +8,7 @@
   flex-direction: column;
   padding: 0 20px;
   text-align: center;
-  height: 400px;
+  height: 500px;
   color: $light-color;
 
   &::before {
@@ -40,6 +40,10 @@
   position: relative;
   max-width: 620px;
   z-index: 4;
+
+  .button {
+    margin-top: 20px;
+  }
 
   span {
     color: $dark-color;
