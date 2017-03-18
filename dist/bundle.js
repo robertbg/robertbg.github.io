@@ -3,9 +3,7 @@
 
 require('./lib/prism.js');
 
-(function () {
-    console.log('working');
-})();
+(function () {})();
 
 },{"./lib/prism.js":2}],2:[function(require,module,exports){
 (function (global){
