@@ -94,7 +94,7 @@ strong {
     left: 8px; }
 
 .title {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, white 100%), url("/dist/images/blogbg.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, white 100%), url("/dist/images/blogbg.jpg") no-repeat center center;
   background-size: cover;
   height: 800px;
   text-align: center;
@@ -109,7 +109,7 @@ strong {
   max-width: 465px; }
 
 .title__author {
-  margin: 40px 0 10px;
+  margin: 30px 0 10px;
   opacity: .4; }
 
 .title__logo {
@@ -170,7 +170,7 @@ strong {
   margin: 0; }
 
 .article {
-  margin: -480px auto 60px;
+  margin: -450px auto 60px;
   max-width: 780px;
   padding: 0 20px; }
   .article h2 {
@@ -216,7 +216,7 @@ strong {
       background: rgba(234, 198, 14, 0.7); }
   @media screen and (min-width: 768px) {
     .article {
-      margin-top: -400px;
+      margin-top: -350px;
       padding: 0; } }
 
 .article__comments {
