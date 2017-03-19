@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "babel",
+    "jsx-a11y",
+    "react",
+    "import"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  }
+}

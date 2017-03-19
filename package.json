@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/robertbg/robertbg.github.io#readme",
   "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "front-matter": "^2.1.2",
     "fs-extended": "^0.2.1",
     "github-flavored-markdown": "^1.0.1",

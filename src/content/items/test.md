@@ -3,7 +3,7 @@ template: article.hbs
 fileName: test
 stylesheet: blog.css
 title: Test article
-date:	2017-03-14
+date: 2017-03-14
 preview: > 
     Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Nullam mollis. Ut justo. Suspendisse potenti. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Nullam mollis. Ut justo.
 categories: 
