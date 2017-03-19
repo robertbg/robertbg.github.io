@@ -1,8 +1,8 @@
 ---
 template: article.hbs
-fileName: writing-to-beat-imposter-syndrome
+fileName: confessions-of-an-imposter
 stylesheet: blog.css
-title: Writing to beat Imposter Syndrome
+title: Confessions of an imposter
 date:	2017-03-19
 preview: > 
     I've been a making websites for over 10 years now. In that time I've often thought about starting a blog about my experiences, but never really got around to it.

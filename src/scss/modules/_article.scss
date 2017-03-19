@@ -1,5 +1,5 @@
 .article {
-  margin: -450px auto 60px;
+  margin: 0 auto 60px;
   max-width: 780px;
   padding: 0 20px;
 
@@ -63,7 +63,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    margin-top: -350px;
     padding: 0;
   }
   
