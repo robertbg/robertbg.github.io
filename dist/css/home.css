@@ -457,7 +457,7 @@ strong {
     z-index: -1;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, white 100%), url("/dist/images/blogbg.jpg") no-repeat center center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, white 100%), url("/dist/images/blogbg.jpg") no-repeat center center;
     background-size: cover; }
 
 .title__category {
