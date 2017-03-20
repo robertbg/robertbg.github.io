@@ -43,6 +43,7 @@
 <p>This blog is intended to help me continue in the habit of breaking down problems in such a way that they can be explained. And to give me a reason to keep diving deeper into the world of development and gain that deeper understanding. I&#39;m not expecting many readers, I don&#39;t exactly intend on advertising it much, but if someone else finds it useful too, then that&#39;s a great bonus!</p>
 <p>Now I just need to figure out what I want to write about!</p>
 
+
         
         <svg viewBox="0 0 40 10" class="divider">
             <g transform="translate(-580.000000, -249.000000)">
@@ -54,6 +55,8 @@
             </g>
         </svg>
 
+        <div class="article__comments" id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
 
     </article>
 
@@ -68,6 +71,18 @@
         <p class="footer__subline">Company Number: 9390203</p>
         </div>
     </footer>
+    <script>
+    var disqus_config = function () {
+      this.page.url = 'https://robbg.io/blog/2017-03-19-confessions-of-an-imposter';
+      this.page.identifier = '2017-03-19-confessions-of-an-imposter';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://robbg-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
 
 
   </body>

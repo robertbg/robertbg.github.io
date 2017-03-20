@@ -24,6 +24,8 @@
 
     <article class="article">
         {{{bodyFormatted}}}
+
+        {{#attributes.showComments}}
         
         <svg viewBox="0 0 40 10" class="divider">
             <g transform="translate(-580.000000, -249.000000)">
@@ -35,7 +37,6 @@
             </g>
         </svg>
 
-        {{#attributes.showComments}}
         <div class="article__comments" id="disqus_thread"></div>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
         {{/attributes.showComments}}
