@@ -6,25 +6,25 @@ $dark-color: #302d3b;
 
 // TYPOGRAPHY
 $body-font-family: 'Open Sans', sans-serif;
-$header-font-family: 'Montserrat Black', sans-serif;
+$header-font-family: 'Montserrat', sans-serif;
 
-$base-font-size: 13px;
-$base-line-height: 1.4rem;
+$base-font-size: 17px;
+$base-line-height: 26px;
 
-$small-font-size: .9rem;
-$small-line-height: 1.4rem;
+$small-font-size: 14px;
+$small-line-height: 20px;
 
-$medium-font-size: 1.2rem;
-$medium-line-height: 1.4rem;
+$medium-font-size: 24px;
+$medium-line-height: 30px;
 
-$large-font-size: 2rem;
-$large-line-height: 2.4rem;
+$large-font-size: 34px;
+$large-line-height: 40px;
 
-$largest-font-size: 3rem;
-$largest-line-height: 3.4rem;
+$largest-font-size: 42px;
+$largest-line-height: 50px;
 
 // BREAKPOINTS
-$mobile: 374px;
+$mobile: 376px;
 $tablet: 768px;
 $desktop: 1024px;
 $large-desktop: 1920px;

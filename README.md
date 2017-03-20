@@ -10,5 +10,5 @@ This is the repo for my personal webspace.
 - `yarn install`
 
 ## Build Instructions
-- `gulp` to build assets
-- `gulp watch` to watch for changes
+- `npm run build` to build and compile all assets
+- `npm run server` to start up local static http server

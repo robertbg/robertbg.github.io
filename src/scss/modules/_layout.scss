@@ -1,13 +1,15 @@
 @import '../variables';
 
 html {
-  line-height: $base-line-height;
-  color: $light-color;
+  color: $dark-color;
   font-family: $body-font-family;
-  font-size: $base-font-size;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  font-weight: 300;
 
   @media screen and (min-width: $tablet) {
-    color: $dark-color;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
   }
 }
 
@@ -20,6 +22,8 @@ body {
 }
 
 a {
+  color: $dark-color;
+  transition: all .3s;
   text-decoration: none;
 }
 
@@ -30,7 +34,7 @@ strong {
 .only__desktop {
   display: none;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     display: block;
   }
 }

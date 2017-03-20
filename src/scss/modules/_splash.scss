@@ -1,13 +1,13 @@
 @import '../variables';
 
-.header {
+.splash {
   display: flex;
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 0;
   width: 100vw;
-  min-height: 100vh;
   text-align: center;
   flex-direction: column;
+  color: $dark-color;
 
   &::before {
     position: absolute;
@@ -18,7 +18,7 @@
     background: url('dist/images/hero.jpg') no-repeat center center;
     background-size: cover;
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    height: calc(100% - 20px);
     content: '';
   }
 
@@ -29,7 +29,7 @@
     z-index: 1;
     background-color: $dark-color;
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    height: calc(100% - 20px);
     content: '';
   }
 
@@ -38,6 +38,8 @@
     background: none;
     text-align: left;
     flex-direction: row;
+    height: 800px;
+    max-height: 100vw;
 
     &::before,
     &::after {
@@ -46,7 +48,22 @@
   }
 }
 
-.header__left {
+.splash__logo {
+  margin-top: 40px;
+  width: 150px;
+  fill: $light-color;
+
+  .logo__dot {
+    fill: $highlight-color;
+  }
+
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.splash__left {
   position: relative;
   z-index: 3;
   padding: 20px;
@@ -70,29 +87,7 @@
   }
 }
 
-.header__logo {
-  position: relative;
-  transition: transform .3s;
-  z-index: 4;
-  margin-top: 20px;
-  width: 200px;
-  fill: $light-color;
-
-  .logo__dot {
-    fill: $highlight-color;
-  }
-
-  @media screen and (min-width: $mobile) {
-    margin-top: 40px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    margin-top: 0;
-    width: 75px;
-  }
-}
-
-.header__right {
+.splash__right {
   display: flex;
   position: relative;
   z-index: 3;
@@ -114,15 +109,17 @@
   }
 }
 
-.header__content {
+.splash__content {
   margin: 0 auto;
   max-width: 200px;
+  color: $light-color;
 
   @media screen and (min-width: $mobile) {
     max-width: 300px;
   }
 
   @media screen and (min-width: $tablet) {
+    color: $dark-color;
     margin: 0;
   }
 
@@ -132,12 +129,7 @@
 
 }
 
-.header__title {
-  text-transform: uppercase;
-  line-height: $large-line-height;
-  font-family: $header-font-family;
-  font-size: $large-font-size;
-
+.splash__title {
   span {
     color: $highlight-color;
   }
@@ -147,14 +139,9 @@
       color: $light-color;
     }
   }
-
-  @media screen and (min-width: $desktop) {
-    line-height: $largest-line-height;
-    font-size: $largest-font-size;
-  }
 }
 
-.header__tagline {
+.splash__tagline {
   margin-top: 10px;
   line-height: $small-line-height;
   font-size: $small-font-size;
@@ -165,32 +152,7 @@
   }
 }
 
-.header__links {
-  margin-top: 30px;
-  text-transform: uppercase;
-  line-height: $base-line-height;
-  font-size: $base-font-size;
-
-  a {
-    padding-bottom: 1px;
-    color: $highlight-color;
-    font-weight: 700;
-
-    @media screen and (min-width: $tablet) {
-      color: $dark-color;
-
-      &:hover {
-        border-bottom: 2px solid $dark-color;
-      }
-    }
-  }
-}
-
-.header__email {
-  margin-top: 40px;
-}
-
-.header__brands {
+.splash__brands {
   display: flex;
   position: relative;
   z-index: 4;
@@ -204,7 +166,7 @@
   }
 }
 
-.header__brand {
+.splash__brand {
   margin-bottom: 10px;
   padding: 0 10px 0 0;
   flex-basis: 50%;

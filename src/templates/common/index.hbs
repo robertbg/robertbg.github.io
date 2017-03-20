@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+  {{> head}}
+  <body>
+
+    <nav class="nav nav-inverse">
+      <img src="/src/svg/logo.svg" class="nav__logo">
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="blog">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="splash">
+      <div class="splash__left">\
+        <img src="/src/svg/logo.svg" class="splash__logo">
+      </div>
+      <div class="splash__right">
+        <div class="splash__content">
+          <h1 class="heading splash__title">I am a <span>creative</span> <span>Front-End</span> & <span>Node</span> Developer</h1>
+          <div class="splash__tagline">
+             <p>{{attributes.description}}</p>
+          </div>
+
+          <ul class="splash__brands">
+            <li class="splash__brand">
+              <img src="/src/svg/playstation.svg" alt="Sony Playstation" />
+            </li>
+            <li class="splash__brand">
+              <img src="/src/svg/cosmo.svg" alt="Cosmopolitan UK" />
+            </li>
+            <li class="splash__brand">
+              <img src="/src/svg/digitalspy.svg" alt="Digital Spy" />
+            </li>
+            <li class="splash__brand">
+              <img src="/src/svg/sega.svg" alt="SEGA" />
+            </li>
+            <li class="splash__brand">
+              <img src="/src/svg/footballmanager.svg" alt="Football Manager" />
+            </li>
+            <li class="splash__brand">
+              <img src="/src/svg/citi.svg" alt="Citibank" />
+            </li>
+            <li class="splash__brand">
+              <img src="/src/svg/asda.svg" alt="ASDA" />
+            </li>
+            <li class="splash__brand only__desktop">
+              <img src="/src/svg/hp.svg" alt="Hewlett Packard" />
+            </li>
+            <li class="splash__brand">
+              <img src="/src/svg/netflix.svg" alt="Netflix" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <div class="about__content">
+        <h1 class="heading">Hello!</h1>
+        <p>I am a highly committed, experienced full-stack JavaScript Engineer, Front-End Architect and Web Performance Consultant. Passionate about building great products for the web.</p>
+        <p>I have expertise with multiple programming languages and frameworks including: <strong>Javascript</strong> (ES6, Node, React, Webpack, Gulp), <strong>HTML5</strong>, <strong>CSS</strong> (SASS & LESS), <strong>SQL</strong> (MySQL, PostgreSQL & NoSQL) and more. I am commercially aware, creative, and diligent.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact__content">
+        <h1 class="heading">Get in <span>Touch</span></h1>
+        <a href="mailto:{{attributes.contact}}?Subject=Website%20enquiry" class="button">Email Me</a>
+        <a href="{{attributes.cv}}" target="_blank" class="button">Download Cv</a>
+        <ul class="social">
+          <li><a href="https://github.com/robertbg" class="social__link" target="_blank"><img class="social__icon social__icon-github" src="/src/svg/github.svg" alt="Github" /></a></li>
+          <li><a href="https://twitter.com/robbg83" class="social__link" target="_blank"><img class="social__icon social__icon-twitter" src="/src/svg/twitter.svg" alt="Github" /></a></li>
+          <li><a href="https://uk.linkedin.com/in/robbarnsgraham" class="social__link" target="_blank"><img class="social__icon social__icon-linkedin" src="/src/svg/linkedin.svg" alt="Github" /></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer footer-inverse">
+      <div class="footer__content">
+        <ul class="footer__list">
+          <li><a class="js-internal" href="#about">About</a></li>
+          <li><a class="js-internal" href="#contact">Contact</a></li>
+          <li><a href="blog">Blog</a></li>
+        </ul>
+        <p class="footer__copyright">&copy; 2017 RBG Digital Ltd.</p>
+        <p class="footer__subline">Company Number: 9390203</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

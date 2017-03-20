@@ -1,0 +1,51 @@
+@import '../variables';
+
+.about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  text-align: center;
+  color: $light-color;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    opacity: .1;
+    z-index: 2;
+    background: url('dist/images/macbook.jpg') no-repeat center center;
+    background-size: cover;
+    width: calc(100% - 40px);
+    height: calc(100%);
+    content: '';
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+    background-color: $dark-color;
+    width: calc(100% - 40px);
+    height: calc(100%);
+    content: '';
+  }
+
+  strong {
+    color: $highlight-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: 600px;
+    padding: 0 20px;
+  }
+}
+
+.about__content {
+  position: relative;
+  max-width: 620px;
+  z-index: 4;
+}

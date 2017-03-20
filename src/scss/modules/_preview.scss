@@ -1,0 +1,55 @@
+.previews {
+  margin: 0 auto 60px;
+  max-width: 780px; 
+}
+
+.preview {
+  display: flex;
+  padding: 0 20px 30px;
+  border-bottom: 1px solid transparentize($dark-color, .95);
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 30px 0;
+  }
+}
+
+.preview__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  width: 150px;
+  padding-right: 20px;
+  font-family: $header-font-family;
+  font-size: $largest-font-size;
+  opacity: .3;
+
+  span {
+    line-height: $base-line-height;
+    font-size: $base-font-size;
+  }
+}
+
+.preview__link {
+  color: $dark-color;
+
+  h2 {
+    transition: color .3s;
+  }
+
+  &:hover {
+    h2 {
+      color: $highlight-color;
+    }
+  }
+}
+
+.preview__text {
+  margin: 0;
+}
