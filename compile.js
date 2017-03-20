@@ -28,8 +28,8 @@ const registerPartials = () => {
   const files = fs.readdirSync(paths.partialPath); // Read partials
 
   files.forEach((file) => {
-    let content = fs.readFileSync(`${paths.partialPath}/${file}`, 'utf8');
-    let filename = file.substring(0, file.lastIndexOf('.'));
+    const content = fs.readFileSync(`${paths.partialPath}/${file}`, 'utf8');
+    const filename = file.substring(0, file.lastIndexOf('.'));
     handlebars.registerPartial(filename, content);
   });
 };
@@ -38,7 +38,7 @@ const registerPartials = () => {
 const registerHelpers = () => handlebars.registerHelper('dateFormat', dateformat);
 
 // Inline css and js
-const inlineSource = (html) => inline.sync(html, { compress: true });
+const inlineSource = html => inline.sync(html, { compress: true });
 
 // Renders the template using Handlebars
 const renderTemplate = (templatePath, viewData) => {
@@ -49,7 +49,7 @@ const renderTemplate = (templatePath, viewData) => {
 
 // Render and write
 const writeToFile = (template, data, path) => {
-  let HTML = renderTemplate(template, data); // Render template
+  const HTML = renderTemplate(template, data); // Render template
   mkpath.sync(path); // Make sure path exists
   fs.writeFileSync(`${path}/index.html`, HTML, { encoding: 'utf8' }); // Write to file
 };
@@ -60,7 +60,7 @@ const buildSingleHTML = (content) => {
   const formattedDate = moment(data.attributes.date).format('YYYY-MM-DD'); // Format date
   const htmlPath = `${paths.buildPath}blog/${formattedDate}-${data.attributes.fileName}`; // Build path
   const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
-  data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html 
+  data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
   globalItems.push(data); // Push into global array for blog index
   writeToFile(htmlTemplate, data, htmlPath); // Render the HTML content and write to file
 };
@@ -81,9 +81,11 @@ const buildBlogHTML = () => {
   const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // TEmpalte path
   data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
   data.items = globalItems.sort((a, b) => { // Sort posts in alphabetical order
-    a = new Date(a.attributes.date);
-    b = new Date(b.attributes.date);
-    return a > b ? -1 : a < b ? 1 : 0;
+    const aDate = new Date(a.attributes.date);
+    const bDate = new Date(b.attributes.date);
+    if (aDate > bDate) return -1;
+    else if (aDate < bDate) return 1;
+    return 0;
   });
   writeToFile(htmlTemplate, data, `${paths.buildPath}/blog`); // Render the HTML content and write to file
 };
@@ -111,6 +113,6 @@ const buildMainPages = () => {
       buildSingleHTML(content); // Build html for each blog post
       next(); // Moves on to the next content file
     },
-    buildMainPages
+    buildMainPages,
   );
 })();
