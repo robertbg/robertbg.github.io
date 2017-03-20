@@ -8,6 +8,8 @@ preview: >
     I've been a making websites for over 10 years now. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
 categories: 
   - Personal
+prettyCode: false
+showComments: false
 ---
 
 I've been a making websites for over 10 years now. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!

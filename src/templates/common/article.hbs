@@ -35,13 +35,16 @@
             </g>
         </svg>
 
+        {{#attributes.showComments}}
         <div class="article__comments" id="disqus_thread"></div>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
+        {{/attributes.showComments}}
 
     </article>
 
     {{>footer}}
 
+    {{#attributes.showComments}}
     <script>
     var disqus_config = function () {
       this.page.url = 'https://robbg.io/blog/{{dateFormat attributes.date "YYYY-MM-DD"}}-{{attributes.fileName}}';
@@ -54,8 +57,11 @@
     (d.head || d.body).appendChild(s);
     })();
     </script>
+    {{/attributes.showComments}}
 
+    {{#attributes.prettyCode}}
     <script inline src="/dist/js/lib/prism.js" />
+    {{/attributes.prettyCode}}
 
   </body>
 </html>
