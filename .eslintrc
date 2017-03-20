@@ -6,6 +6,9 @@
     "react",
     "import"
   ],
+  "rules": {
+    "comma-dangle": 0
+  },
   "env": {
     "node": true,
     "es6": true

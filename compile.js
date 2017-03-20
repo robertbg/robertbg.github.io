@@ -113,6 +113,6 @@ const buildMainPages = () => {
       buildSingleHTML(content); // Build html for each blog post
       next(); // Moves on to the next content file
     },
-    buildMainPages,
+    buildMainPages
   );
 })();
