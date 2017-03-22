@@ -5,7 +5,7 @@ title: Confessions of an imposter
 slug: confessions-of-an-imposter
 date:	2017-03-19
 preview: > 
-    I've been a making websites for over 10 years now. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
+    I've been making websites for over 15 years, 10 of those professionally. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
 categories: 
   - Personal
 prettyCode: false
