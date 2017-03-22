@@ -58,7 +58,7 @@ const writeToFile = (template, data, path) => {
 const buildSingleHTML = (content) => {
   const data = fm(content); // Front matter the content
   const formattedDate = moment(data.attributes.date).format('YYYY-MM-DD'); // Format date
-  const htmlPath = `${paths.buildPath}blog/${formattedDate}-${data.attributes.fileName}`; // Build path
+  const htmlPath = `${paths.buildPath}blog/${formattedDate}-${data.attributes.slug}`; // Build path
   const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
   data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
   globalItems.push(data); // Push into global array for blog index

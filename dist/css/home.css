@@ -465,6 +465,7 @@ strong {
   font-size: 14px; }
 
 .title__heading h1 {
+  padding: 0 20px;
   margin: 20px auto;
   max-width: 465px; }
 
