@@ -6,6 +6,7 @@
     "react",
     "import"
   ],
+  "parser": "babel-eslint",
   "rules": {
     "comma-dangle": 0
   },
