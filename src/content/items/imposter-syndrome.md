@@ -5,14 +5,14 @@ title: Confessions of an imposter
 slug: confessions-of-an-imposter
 date:	2017-03-19
 preview: > 
-    I've been a making websites for over 10 years now. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
+    I've been making websites for over 15 years, 10 of those professionally. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
 categories: 
   - Personal
 prettyCode: false
 showComments: true
 ---
 
-I've been a making websites for over 10 years now. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
+I've been making websites for over 15 years, 10 of those professionally. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
 
 ## So why now?
 Overall, I think I'm pretty good at my job. Or at least I hope I am! I'm up to speed on much of the latest goings on in the Javscript world (although nowhere near everything, who is!). I have worked with some big companies on some ambitious projects. I write Javascript in [ES6](http://es6-features.org/), have built production [React](https://facebook.github.io/react/) / [Redux](https://redux.js.org/docs/introduction/) applications, and managed to get my head around [Webpack](https://webpack.github.io/). I even recently architected a bespoke front-end framework for a major global publisher.
