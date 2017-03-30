@@ -37,7 +37,7 @@
     "marked": "^0.3.6",
     "moment": "^2.18.0",
     "nano-fs": "^1.2.4",
-    "node-dir": "^0.1.16",
+    "node-dir": "fshost/node-dir",
     "node-sass": "^4.5.0",
     "prismjs": "^1.6.0"
   }
