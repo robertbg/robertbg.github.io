@@ -26,7 +26,8 @@
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint-plugin-react": "^6.10.0",
+    "sass-lint": "^1.10.2"
   },
   "dependencies": {
     "front-matter": "^2.1.2",

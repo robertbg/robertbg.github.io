@@ -3,10 +3,10 @@
 .splash {
   display: flex;
   position: relative;
+  flex-direction: column;
   padding: 20px 20px 0;
   width: 100vw;
   text-align: center;
-  flex-direction: column;
   color: $dark-color;
 
   &::before {
@@ -34,12 +34,12 @@
   }
 
   @media screen and (min-width: $tablet) {
+    flex-direction: row;
     margin: 0;
     background: none;
-    text-align: left;
-    flex-direction: row;
     height: 800px;
     max-height: 100vw;
+    text-align: left;
 
     &::before,
     &::after {
@@ -90,22 +90,21 @@
 .splash__right {
   display: flex;
   position: relative;
+  flex-grow: 1;
   z-index: 3;
   padding: 20px;
-  flex-grow: 1;
 
   @media screen and (min-width: $mobile) {
     padding-top: 40px;
   }
 
   @media screen and (min-width: $tablet) {
-    background-color: $highlight-color;
-    padding-top: 20px;
-    width: 55%;
-    min-height: 100%;
-    padding-top: 60px;
     align-items: center;
     justify-content: center;
+    background-color: $highlight-color;
+    padding-top: 60px;
+    width: 55%;
+    min-height: 100%;
   }
 }
 
@@ -119,8 +118,8 @@
   }
 
   @media screen and (min-width: $tablet) {
-    color: $dark-color;
     margin: 0;
+    color: $dark-color;
   }
 
   @media screen and (min-width: $desktop) {
@@ -155,11 +154,11 @@
 .splash__brands {
   display: flex;
   position: relative;
+  flex-flow: row wrap;
   z-index: 4;
   margin: 40px 0 20px;
   padding: 0;
   list-style: none;
-  flex-flow: row wrap;
 
   @media screen and (min-width: $tablet) {
     margin-top: 60px;
@@ -167,9 +166,9 @@
 }
 
 .splash__brand {
+  flex-basis: 50%;
   margin-bottom: 10px;
   padding: 0 10px 0 0;
-  flex-basis: 50%;
 
   svg {
     opacity: .2;

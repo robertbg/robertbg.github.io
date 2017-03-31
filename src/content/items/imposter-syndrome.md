@@ -9,7 +9,7 @@ preview: >
 categories: 
   - Personal
 prettyCode: false
-showComments: true
+showComments: false
 ---
 
 I've been making websites for over 15 years, 10 of those professionally. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!

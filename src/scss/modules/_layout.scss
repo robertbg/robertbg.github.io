@@ -1,15 +1,15 @@
 @import '../variables';
 
 html {
+  line-height: $small-line-height;
   color: $dark-color;
   font-family: $body-font-family;
   font-size: $small-font-size;
-  line-height: $small-line-height;
   font-weight: 300;
 
   @media screen and (min-width: $tablet) {
-    font-size: $base-font-size;
     line-height: $base-line-height;
+    font-size: $base-font-size;
   }
 }
 
@@ -22,9 +22,9 @@ body {
 }
 
 a {
-  color: $dark-color;
   transition: all .3s;
   text-decoration: none;
+  color: $dark-color;
 }
 
 strong {

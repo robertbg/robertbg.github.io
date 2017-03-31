@@ -3,17 +3,17 @@
 .button {
   display: inline-block;
   transition: background .3s;
-  background: transparentize($highlight-color, .3);
+  margin: 0 15px;
   border: 1px solid $dark-color;
   border-radius: 30px;
-  text-transform: uppercase;
-  font-size: $small-font-size;
-  line-height: $small-line-height;
-  font-weight: 700;
+  background: transparentize($highlight-color, .3);
   padding: 15px 30px;
-  color: $dark-color;
-  margin: 0 15px;
   width: 200px;
+  text-transform: uppercase;
+  line-height: $small-line-height;
+  color: $dark-color;
+  font-size: $small-font-size;
+  font-weight: 700;
 
   &:hover {
     background: $highlight-color;

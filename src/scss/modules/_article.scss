@@ -1,61 +1,68 @@
 .article {
   margin: 0 auto 60px;
-  max-width: 780px;
   padding: 0 20px;
+  max-width: 780px;
 
   h2 {
     margin-top: 40px;
     text-transform: uppercase;
+    line-height: $small-line-height;
     font-family: $header-font-family;
-    line-height: $medium-line-height;
-    font-size: $medium-font-size;
+    font-size: $small-font-size;
+
+    @media screen and (min-width: $tablet) {
+      line-height: $medium-line-height;
+      font-size: $medium-font-size;
+    }
   }
 
   p {
-    &:after {
-    content: "";
-    display: table;
-    clear: both;
+    &::after {
+      display: table;
+      clear: both;
+      content: '';
     }
   }
 
-  img.left {
-    width: 100%;
-    height: auto;
-    padding: 20px 0;
+  img {
+    &.left {
+      padding: 20px 0;
+      width: 100%;
+      height: auto;
 
-    @media screen and (min-width: $tablet) {
-      width: auto;
-      max-height: 300px;
-      padding: 0 20px 20px 0;
-      float: left;
+      @media screen and (min-width: $tablet) {
+        float: left;
+        padding: 0 20px 20px 0;
+        width: auto;
+        max-height: 300px;
+      }
     }
-  }
 
-  img.right {
-    width: 100%;
-    height: auto;
-    padding: 20px 0;
+    &.right {
+      padding: 20px 0;
+      width: 100%;
+      height: auto;
 
-    @media screen and (min-width: $tablet) {
-      padding: 0 0 20px 20px;
-      width: auto;
-      max-height: 300px;
-      float: right;
+      @media screen and (min-width: $tablet) {
+        float: right;
+        padding: 0 0 20px 20px;
+        width: auto;
+        max-height: 300px;
+      }
     }
   }
 
   pre {
     margin: 20px 0;
-    font-family: 'Consolas', monospace;
     max-width: 100%;
     overflow: scroll;
+    font-family: 'Consolas', monospace;
   }
 
   a {
     display: inline-block;
-    padding: 0 5px;
     background: transparentize($highlight-color, .6);
+    padding: 0 5px;
 
     &:hover {
       background: transparentize($highlight-color, .3);
@@ -65,7 +72,6 @@
   @media screen and (min-width: $tablet) {
     padding: 0;
   }
-  
 }
 
 .article__comments {

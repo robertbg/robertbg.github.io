@@ -1,14 +1,14 @@
 @import '../variables';
 
 .footer {
-  position: relative;
   display: flex;
+  position: relative;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 0 20px 100px 20px;
-  text-align: center;
   border-top: 1px solid transparentize($dark-color, .95);
+  padding: 0 20px 100px;
+  text-align: center;
 
   a {
     &:hover {
@@ -17,8 +17,8 @@
   }
 
   &-inverse {
-    color: $light-color;
     border: 0;
+    color: $light-color;
 
     &::after {
       position: absolute;
@@ -45,18 +45,17 @@
 .footer__list {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  font-size: $small-font-size;
-  line-height: $small-line-height;
-  text-transform: uppercase;
-  font-weight: 700;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  line-height: $small-line-height;
+  font-size: $small-font-size;
+  font-weight: 700;
 
   li {
     display: inline;
     padding: 0 25px;
-    margin-bottom: 10px;
   }
 
   @media screen and (min-width: $tablet) {
@@ -70,8 +69,8 @@
 
 .footer__content {
   position: relative;
-  padding: 45px 0;
   z-index: 4;
+  padding: 45px 0;
 }
 
 .footer__copyright {
@@ -79,8 +78,8 @@
 }
 
 .footer__subline {
+  opacity: .6;
   margin: 0;
-  font-size: $small-font-size;
   line-height: $small-line-height;
-  opacity: 0.6;
+  font-size: $small-font-size;
 }

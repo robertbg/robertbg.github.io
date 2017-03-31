@@ -1,23 +1,24 @@
 .title {
-  text-align: center;
   padding-top: 50px;
+  text-align: center;
+
   &::after {
-    content: '';
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     z-index: -1;
-    height: 100vh;
-    width: 100vw;
     background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, .9) 0%,
-        rgba(255, 255, 255, 1) 100%
-      ),
-      url('/dist/images/blogbg.jpg'
+      to bottom,
+      rgba(255, 255, 255, .9) 0%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('/dist/images/blogbg.jpg'
     ) no-repeat center center;
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    content: '';
   }
 }
 
@@ -28,22 +29,22 @@
 
 .title__heading {
   h1 {
-    padding: 0 20px;
     margin: 20px auto;
+    padding: 0 20px;
     max-width: 465px;
   }
 }
 
 .title__author {
-  margin: 30px 0 10px;
   opacity: .4;
+  margin: 30px 0 10px;
 }
 
 .title__logo {
+  margin-bottom: 40px;
   width: 75px;
   height: 30px;
   fill: $dark-color;
-  margin-bottom: 40px;
 
   .logo__dot {
     fill: $highlight-color;
