@@ -5,7 +5,7 @@ title: Async/Await and Node FS
 slug: async-await-and-node-fs
 date: 2017-03-31
 preview: > 
-    I've been making websites for over 15 years, 10 of those professionally. In that time I've often thought about starting a blog about my experiences as a developer, but never really got around to it before. Finally, I thought I'd give it a go!
+    This blog is powered by a very simply Node application that I wrote to compile markdown into static HTML. When I first built that application I took some shortcuts to help me ship it quicker. It turns out, those shortcuts were totally unnecessary. Async/await to the rescue!
 categories: 
   - Javascript
 prettyCode: true
