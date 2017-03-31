@@ -52,12 +52,17 @@
     }
   }
 
+  code {
+    color: $code-color;
+    font-family: 'Consolas', monospace;
+  }
+
   pre {
     margin: 20px 0;
     max-width: 100%;
     overflow: scroll;
-    font-family: 'Consolas', monospace;
   }
+
 
   a {
     display: inline-block;
