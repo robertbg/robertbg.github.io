@@ -77,7 +77,7 @@ const buildPost = async (filePath) => {
 
 // Builds email content and writes to file.
 const buildPage = async (filePath) => {
-  console.log('\u2630 Building page from', filePath);
+  console.log('\u26A1 Building page from', filePath);
   const content = await fs.readFile(filePath, { encoding: 'utf8' }); // Read content path
   const data = fm(content); // Front matter the content
   const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
