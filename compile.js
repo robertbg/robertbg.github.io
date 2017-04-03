@@ -104,7 +104,7 @@ const buildPage = async (filePath) => {
 };
 
 // Filter out any files that don't have .md extension
-const filterMarkdownFiles = (file) => {
+const filterOnlyMarkdownFiles = (file) => {
   const extname = path.extname(file);
   return (extname === '.md');
 };
@@ -112,18 +112,12 @@ const filterMarkdownFiles = (file) => {
 // Run app
 (() => {
   setupHandlebars() // Register partials
-  .then(() => dir.promiseFiles(options.paths.posts))
-  .then(files => files
-    .filter(filterMarkdownFiles)
-    .map(buildPost) // Map to return array of promises that resolve to the built HTML
-  )
-  .then(posts => Promise.all(posts))
-  .then(() => dir.promiseFiles(options.paths.pages))
-  .then(files => files
-    .filter(filterMarkdownFiles)
-    .map(buildPage) // Map to return array of promises that resolve to the built HTML
-  )
-  .then(pages => Promise.all(pages))
+  .then(() => dir.promiseFiles(options.paths.posts)) // Build posts first
+  .then(files => files.filter(filterOnlyMarkdownFiles).map(buildPost)) // Map files to buildPost
+  .then(posts => Promise.all(posts)) // Execute
+  .then(() => dir.promiseFiles(options.paths.pages)) // Then build pages
+  .then(files => files.filter(filterOnlyMarkdownFiles).map(buildPage)) // Map files to buildPage
+  .then(pages => Promise.all(pages)) // Execute
   .then(() => console.log('\u263a All done!'))
   .catch(e => console.error('\u2620', e));
 })();
