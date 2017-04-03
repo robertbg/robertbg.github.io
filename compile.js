@@ -47,6 +47,13 @@ const inlineSource = html => new Promise((resolve, reject) => {
   });
 });
 
+// Register handlebars helpers and partials
+const setupHandlebars = async () => {
+  console.log('\u2699 Setting up templating engine');
+  registerHelpers();
+  await registerPartials();
+};
+
 // Renders the template using Handlebars
 const renderTemplate = async (templatePath, viewData) => {
   const content = await fs.readFile(templatePath, { encoding: 'utf-8' }); // Read path
@@ -104,10 +111,8 @@ const filterMarkdownFiles = (file) => {
 
 // Run app
 (() => {
-  registerPartials(); // Register partials
-  registerHelpers(); // Register helpers
-
-  dir.promiseFiles(options.paths.posts)
+  setupHandlebars() // Register partials
+  .then(() => dir.promiseFiles(options.paths.posts))
   .then(files => files
     .filter(filterMarkdownFiles)
     .map(buildPost) // Map to return array of promises that resolve to the built HTML
