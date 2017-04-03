@@ -8,27 +8,29 @@ const marked = require('marked');
 const moment = require('moment');
 const path = require('path');
 
-// Paths
-const paths = {
-  postsPath: './src/content/posts',
-  pagesPath: './src/content/pages',
-  templatePath: './src/templates/common',
-  partialPath: './src/templates/partials',
-  buildPath: '.',
+// Set up options
+const options = {
+  paths: {
+    posts: './src/content/posts',
+    pages: './src/content/pages',
+    templates: './src/templates/common',
+    partials: './src/templates/partials',
+    build: '.',
+  },
+  markdown: {
+    gfm: true
+  }
 };
 
-// Array to store blog posts
+// Array to store blog posts as they are created so they can be iterated later
 const globalItems = [];
-
-// Markdown options
-const markedOpts = { gfm: true };
 
 // Register partials
 const registerPartials = async () => {
-  const files = await fs.readdir(paths.partialPath); // Read partials
+  const files = await fs.readdir(options.paths.partials); // Read partials
 
   files.forEach(async (file) => {
-    const content = await fs.readFile(`${paths.partialPath}/${file}`, 'utf8');
+    const content = await fs.readFile(`${options.paths.partials}/${file}`, 'utf8');
     const filename = file.substring(0, file.lastIndexOf('.'));
     handlebars.registerPartial(filename, content);
   });
@@ -60,28 +62,28 @@ const writeToFile = async (template, data, filePath) => {
   return fs.writeFile(`${filePath}/index.html`, HTML, { encoding: 'utf8' }); // Write to file
 };
 
-// Builds email content and writes to file.
+// Builds post content and writes to file.
 const buildPost = async (filePath) => {
-  console.log('\u26A1 Building blog entry from', filePath);
+  console.log('\u26A1 Building post from', filePath);
   const content = await fs.readFile(filePath, { encoding: 'utf8' }); // Read content path
   const data = fm(content); // Front matter the content
   const formattedDate = moment(data.attributes.date).format('YYYY-MM-DD'); // Format date
-  const htmlPath = `${paths.buildPath}/blog/${formattedDate}-${data.attributes.slug}`; // Build path
-  const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
-  data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
+  const htmlPath = `${options.paths.build}/blog/${formattedDate}-${data.attributes.slug}`; // Build path
+  const htmlTemplate = `${options.paths.templates}/${data.attributes.template}`; // Template path
+  data.bodyFormatted = marked(data.body, options.markdown); // Converts markdown body into html
   globalItems.push(data); // Push into global array for blog index
 
   // Render the HTML content and write to file
   return writeToFile(htmlTemplate, data, htmlPath);
 };
 
-// Builds email content and writes to file.
+// Builds page content and writes to file.
 const buildPage = async (filePath) => {
   console.log('\u26A1 Building page from', filePath);
   const content = await fs.readFile(filePath, { encoding: 'utf8' }); // Read content path
   const data = fm(content); // Front matter the content
-  const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
-  data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
+  const htmlTemplate = `${options.paths.templates}/${data.attributes.template}`; // Template path
+  data.bodyFormatted = marked(data.body, options.markdown); // Converts markdown body into html
   data.items = globalItems.sort((a, b) => { // Sort posts in alphabetical order
     const aDate = new Date(a.attributes.date);
     const bDate = new Date(b.attributes.date);
@@ -91,7 +93,7 @@ const buildPage = async (filePath) => {
   });
 
   // Render the HTML content and write to file
-  return writeToFile(htmlTemplate, data, `${paths.buildPath}${data.attributes.slug}`);
+  return writeToFile(htmlTemplate, data, `${options.paths.build}${data.attributes.slug}`);
 };
 
 // Filter out any files that don't have .md extension
@@ -105,13 +107,13 @@ const filterMarkdownFiles = (file) => {
   registerPartials(); // Register partials
   registerHelpers(); // Register helpers
 
-  dir.promiseFiles(paths.postsPath)
+  dir.promiseFiles(options.paths.posts)
   .then(files => files
     .filter(filterMarkdownFiles)
     .map(buildPost) // Map to return array of promises that resolve to the built HTML
   )
   .then(posts => Promise.all(posts))
-  .then(() => dir.promiseFiles(paths.pagesPath))
+  .then(() => dir.promiseFiles(options.paths.pages))
   .then(files => files
     .filter(filterMarkdownFiles)
     .map(buildPage) // Map to return array of promises that resolve to the built HTML
