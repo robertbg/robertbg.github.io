@@ -10,11 +10,11 @@ const path = require('path');
 
 // Paths
 const paths = {
-  contentPath: './src/content/items',
-  globalPath: './src/content/global',
+  postsPath: './src/content/posts',
+  pagesPath: './src/content/pages',
   templatePath: './src/templates/common',
   partialPath: './src/templates/partials',
-  buildPath: './',
+  buildPath: '.',
 };
 
 // Array to store blog posts
@@ -61,12 +61,12 @@ const writeToFile = async (template, data, filePath) => {
 };
 
 // Builds email content and writes to file.
-const buildSingleHTML = async (filePath) => {
+const buildPost = async (filePath) => {
   console.log('\u26A1 Building blog entry from', filePath);
   const content = await fs.readFile(filePath, { encoding: 'utf8' }); // Read content path
   const data = fm(content); // Front matter the content
   const formattedDate = moment(data.attributes.date).format('YYYY-MM-DD'); // Format date
-  const htmlPath = `${paths.buildPath}blog/${formattedDate}-${data.attributes.slug}`; // Build path
+  const htmlPath = `${paths.buildPath}/blog/${formattedDate}-${data.attributes.slug}`; // Build path
   const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
   data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
   globalItems.push(data); // Push into global array for blog index
@@ -75,22 +75,10 @@ const buildSingleHTML = async (filePath) => {
   return writeToFile(htmlTemplate, data, htmlPath);
 };
 
-// Build HTML for homepage
-const buildHomeHTML = async () => {
-  console.log('\u2302 Building home page');
-  const content = await fs.readFile(`${paths.globalPath}/homepage.md`, { encoding: 'utf8' }); // Read content path
-  const data = fm(content); // Front matter the content
-  const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
-  data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
-
-  // Render the HTML content and write to file
-  return writeToFile(htmlTemplate, data, paths.buildPath);
-};
-
-// Build HTML for blog listing page
-const buildBlogHTML = async () => {
-  console.log('\u2630 Building blog index');
-  const content = await fs.readFile(`${paths.globalPath}/blog.md`, { encoding: 'utf8' }); // Read content path
+// Builds email content and writes to file.
+const buildPage = async (filePath) => {
+  console.log('\u2630 Building page from', filePath);
+  const content = await fs.readFile(filePath, { encoding: 'utf8' }); // Read content path
   const data = fm(content); // Front matter the content
   const htmlTemplate = `${paths.templatePath}/${data.attributes.template}`; // Template path
   data.bodyFormatted = marked(data.body, markedOpts); // Converts markdown body into html
@@ -103,7 +91,13 @@ const buildBlogHTML = async () => {
   });
 
   // Render the HTML content and write to file
-  return writeToFile(htmlTemplate, data, `${paths.buildPath}blog`);
+  return writeToFile(htmlTemplate, data, `${paths.buildPath}${data.attributes.slug}`);
+};
+
+// Filter out any files that don't have .md extension
+const filterMarkdownFiles = (file) => {
+  const extname = path.extname(file);
+  return (extname === '.md');
 };
 
 // Run app
@@ -111,16 +105,18 @@ const buildBlogHTML = async () => {
   registerPartials(); // Register partials
   registerHelpers(); // Register helpers
 
-  dir.promiseFiles(paths.contentPath)
+  dir.promiseFiles(paths.postsPath)
   .then(files => files
-    .filter((file) => { // Filter out any files that don't have .md extension
-      const extname = path.extname(file);
-      return (extname === '.md');
-    })
-    .map(buildSingleHTML) // Map to return array of promises that resolve to the built HTML
+    .filter(filterMarkdownFiles)
+    .map(buildPost) // Map to return array of promises that resolve to the built HTML
   )
   .then(posts => Promise.all(posts))
-  .then(() => Promise.all([buildBlogHTML(), buildHomeHTML()]))
+  .then(() => dir.promiseFiles(paths.pagesPath))
+  .then(files => files
+    .filter(filterMarkdownFiles)
+    .map(buildPage) // Map to return array of promises that resolve to the built HTML
+  )
+  .then(pages => Promise.all(pages))
   .then(() => console.log('\u263a All done!'))
   .catch(e => console.error('\u2620', e));
 })();
