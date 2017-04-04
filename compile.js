@@ -110,14 +110,12 @@ const filterOnlyMarkdownFiles = (file) => {
 };
 
 // Run app
-(() => {
-  setupHandlebars() // Register partials
-  .then(() => dir.promiseFiles(options.paths.posts)) // Build posts first
-  .then(files => files.filter(filterOnlyMarkdownFiles).map(buildPost)) // Map files to buildPost
-  .then(posts => Promise.all(posts)) // Execute
-  .then(() => dir.promiseFiles(options.paths.pages)) // Then build pages
-  .then(files => files.filter(filterOnlyMarkdownFiles).map(buildPage)) // Map files to buildPage
-  .then(pages => Promise.all(pages)) // Execute
-  .then(() => console.log('\u263a All done!'))
-  .catch(e => console.error('\u2620', e));
-})();
+setupHandlebars() // Register partials
+.then(() => dir.promiseFiles(options.paths.posts)) // Build posts first
+.then(files => files.filter(filterOnlyMarkdownFiles).map(buildPost)) // Map files to buildPost
+.then(posts => Promise.all(posts)) // Execute
+.then(() => dir.promiseFiles(options.paths.pages)) // Then build pages
+.then(files => files.filter(filterOnlyMarkdownFiles).map(buildPage)) // Map files to buildPage
+.then(pages => Promise.all(pages)) // Execute
+.then(() => console.log('\u263a All done!'))
+.catch(e => console.error('\u2620', e));
