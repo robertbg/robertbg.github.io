@@ -1,0 +1,101 @@
+@import '../variables';
+
+.labs {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  color: $dark-color;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    opacity: .1;
+    z-index: 2;
+    background: url('dist/images/code.jpg') no-repeat center center;
+    background-size: cover;
+    width: calc(100% - 40px);
+    height: calc(100%);
+    content: '';
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+    background-color: $light-color;
+    width: calc(100% - 40px);
+    height: calc(100%);
+    content: '';
+  }
+
+  strong {
+    color: $highlight-color;
+  }
+
+  a {
+    color: $highlight-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 20px;
+    height: 600px;
+  }
+}
+
+.labs__content {
+  position: relative;
+  z-index: 4;
+  max-width: 620px;
+}
+
+.labs__list {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  list-style: none;
+}
+
+.labs__item {
+  position: relative;
+  flex: 1;
+  height: 200px;
+}
+
+.labs__image {
+  display: block;
+  position: absolute;
+  transition: .3s ease-out;
+  z-index: 4;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .2;
+    background-color: $dark-color;
+    content: '';
+  }
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.labs_info {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}

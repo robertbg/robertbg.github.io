@@ -341,6 +341,87 @@ strong {
   z-index: 4;
   max-width: 620px; }
 
+.labs {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  color: #302D3B; }
+  .labs::before {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    opacity: .1;
+    z-index: 2;
+    background: url("dist/images/code.jpg") no-repeat center center;
+    background-size: cover;
+    width: calc(100% - 40px);
+    height: calc(100%);
+    content: ''; }
+  .labs::after {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+    background-color: #FFF;
+    width: calc(100% - 40px);
+    height: calc(100%);
+    content: ''; }
+  .labs strong {
+    color: #EAC60E; }
+  .labs a {
+    color: #EAC60E; }
+  @media screen and (min-width: 768px) {
+    .labs {
+      padding: 0 20px;
+      height: 600px; } }
+
+.labs__content {
+  position: relative;
+  z-index: 4;
+  max-width: 620px; }
+
+.labs__list {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  list-style: none; }
+
+.labs__item {
+  position: relative;
+  flex: 1;
+  height: 200px; }
+
+.labs__image {
+  display: block;
+  position: absolute;
+  transition: .3s ease-out;
+  z-index: 4;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%); }
+  .labs__image::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .2;
+    background-color: #302D3B;
+    content: ''; }
+  .labs__image:hover {
+    filter: grayscale(0%); }
+
+.labs_info {
+  position: relative;
+  z-index: 5;
+  width: 100%; }
+
 .contact {
   display: flex;
   position: relative;
