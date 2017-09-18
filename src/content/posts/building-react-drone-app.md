@@ -28,7 +28,7 @@ I utilised [this fantastic mini-drone library](https://github.com/fetherston/npm
 
 I used the official [create-react-app](https://github.com/facebookincubator/create-react-app) boilerplate to get my React front-end up and running. I'd totally recommend this for all smaller React projects. Saves so much time faffing around getting set up and allows you to jump straight in to building the UI.
 
-If you want to deep dive into the code itself, you can find the entire source code, alongisdes instructions for installation ang usage for this project [on Github](https://github.com/robertbg/drone-react).
+If you want to deep dive into the code itself, you can find the entire source code, alongsides instructions for installation and usage for this project [on Github](https://github.com/robertbg/drone-react).
 
 ## Summary
 In short, this was a really fun little project to spend a quite Saturday afternoon on. It didn't take too long, but certainly helped brush off a few cobwebs in some frameworks / code I hadn't touched in a few months.
