@@ -45,6 +45,14 @@ strong {
       .heading-medium {
         line-height: 30px;
         font-size: 24px; } }
+  .heading-small {
+    margin: 0;
+    line-height: 26px;
+    font-size: 17px; }
+    @media screen and (min-width: 1024px) {
+      .heading-small {
+        line-height: 30px;
+        font-size: 24px; } }
 
 .button {
   display: inline-block;

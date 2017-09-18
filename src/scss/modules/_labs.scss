@@ -35,7 +35,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 0 20px;
+    padding: 20px;
     height: 600px;
   }
 }
@@ -67,7 +67,7 @@
   background: $dark-color;
   cursor: pointer;
   width: 100%;
-  max-height: 360px;
+  max-height: 200px;
   overflow: hidden;
   text-align: center;
 
@@ -75,7 +75,7 @@
     .labs__title {
       transform: translate3d(0, 0, 0);
     }
-    
+
     .labs__image {
       transform: translate3d(0, 0, 0);
       opacity: .5;
@@ -91,7 +91,8 @@
 
   @media screen and (min-width: $tablet) {
     margin: 10px 1%;
-    width: 31%;
+    width: 32%;
+    max-height: 360px;
   }
 }
 
@@ -116,9 +117,12 @@
 .labs__description {
   transform: translate3d(0, 20px, 0);
   transition: opacity .2s, transform .35s;
-  opacity: 0;
+  opacity: 1;
   margin: 0;
   color: $light-color;
+  @media screen and (min-width: $desktop) {
+    opacity: 0;
+  }
 }
 
 .labs__caption {
@@ -136,11 +140,11 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 20px 20px 0;
+    padding: 0 20px;
     width: 100%;
-    height: 25%;
+    height: 75%;
     @media screen and (min-width: $tablet) {
-      height: 60%;
+      height: 65%;
     }
     @media screen and (min-width: $desktop) {
       height: 45%;

@@ -45,6 +45,14 @@ strong {
       .heading-medium {
         line-height: 30px;
         font-size: 24px; } }
+  .heading-small {
+    margin: 0;
+    line-height: 26px;
+    font-size: 17px; }
+    @media screen and (min-width: 1024px) {
+      .heading-small {
+        line-height: 30px;
+        font-size: 24px; } }
 
 .button {
   display: inline-block;
@@ -372,7 +380,7 @@ strong {
     content: ''; }
   @media screen and (min-width: 768px) {
     .labs {
-      padding: 0 20px;
+      padding: 20px;
       height: 600px; } }
 
 .labs__content {
@@ -399,7 +407,7 @@ strong {
   background: #302D3B;
   cursor: pointer;
   width: 100%;
-  max-height: 360px;
+  max-height: 200px;
   overflow: hidden;
   text-align: center; }
   .labs__item:hover .labs__title {
@@ -415,7 +423,8 @@ strong {
   @media screen and (min-width: 768px) {
     .labs__item {
       margin: 10px 1%;
-      width: 31%; } }
+      width: 32%;
+      max-height: 360px; } }
 
 .labs__image {
   display: block;
@@ -436,9 +445,12 @@ strong {
 .labs__description {
   transform: translate3d(0, 20px, 0);
   transition: opacity .2s, transform .35s;
-  opacity: 0;
+  opacity: 1;
   margin: 0;
   color: #FFF; }
+  @media screen and (min-width: 1024px) {
+    .labs__description {
+      opacity: 0; } }
 
 .labs__caption {
   position: absolute;
@@ -454,12 +466,12 @@ strong {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 20px 20px 0;
+    padding: 0 20px;
     width: 100%;
-    height: 25%; }
+    height: 75%; }
     @media screen and (min-width: 768px) {
       .labs__caption > div {
-        height: 60%; } }
+        height: 65%; } }
     @media screen and (min-width: 1024px) {
       .labs__caption > div {
         height: 45%; } }

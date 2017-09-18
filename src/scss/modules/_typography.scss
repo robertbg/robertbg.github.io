@@ -19,4 +19,15 @@
       font-size: $medium-font-size;
     }
   }
+
+  &-small {
+    margin: 0;
+    line-height: $base-line-height;
+    font-size: $base-font-size;
+
+    @media screen and (min-width: $desktop) {
+      line-height: $medium-line-height;
+      font-size: $medium-font-size;
+    }
+  }
 }
