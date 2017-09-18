@@ -72,29 +72,38 @@
         <h1 class="heading">Labs</h1>
         <p>Some recent personal projects I've been working on. For a summary of my professional experience, please check out <a href="#contact">my CV</a>. Unfortunately, it's rare that I am able to share code written in a professional capacity.</p>
       </div>
-      <ul class="labs__list">
-        <li class="labs__item">
-          <div class="labs__image" style="background-image: url('/dist/images/mambo_cover.jpg');" target="_blank"></div>
-          <div class="labs_info">
-            <a class="heading heading-medium">React / Node Drone UI</a>
-            <p>Lorem ipsum...</p>
-          </div>
-        </li>
-        <li class="labs__item">
-          <div class="labs__image" style="background-image: url('/dist/images/starwars_cover.png');" target="_blank"></div>
-          <div class="labs_info">
-            <a href="https://github.com/robertbg/drone-react" class="heading heading-medium">React Star Wars API Viewer</a>
-            <p>Lorem ipsum...</p>
-          </div>
-        </li>
-        <li class="labs__item">
-          <div class="labs__image" style="background-image: url('/dist/images/json_cover.png');" target="_blank"></div>
-          <div class="labs_info">
-            <a href="https://github.com/robertbg/drone-react" class="heading heading-medium">Webpack JSON plugin</a>
-            <p>Lorem ipsum...</p>
-          </div>
-        </li>
-      </ul>
+      <div class="labs__grid">
+        <figure class="labs__item">
+          <img class="labs__image" src="/dist/images/mambo_cover.jpg" alt="Mambo Drone"/>
+          <figcaption class="labs__caption">
+            <div>
+              <h2 class="heading heading-medium labs__title">React / Socket.io Drone UI</h2>
+              <p class="labs__description">Control a Parrot MiniDrone using React</pclass>
+            </div>
+            <a class="labs__link" href="https://github.com/robertbg/drone-react" target="_blank">View more</a>
+          </figcaption>			
+        </figure>
+        <figure class="labs__item">
+          <img class="labs__image" src="/dist/images/starwars_cover.jpg" alt="Star Wars"/>
+          <figcaption class="labs__caption">
+            <div>
+              <h2 class="heading heading-medium labs__title">React / Redux Star Wars</h2>
+              <p class="labs__description">Character / Planet / Spaceship Search</p>
+            </div>
+            <a class="labs__link" href="https://github.com/robertbg/swapi-react" target="_blank">View more</a>
+          </figcaption>			
+        </figure>
+        <figure class="labs__item">
+          <img class="labs__image" src="/dist/images/json_cover.jpg" alt="JSON"/>
+          <figcaption class="labs__caption">
+            <div>
+              <h2 class="heading heading-medium labs__title">Webpack JSON Plugin</h2>
+              <p class="labs__description">A plugin to emit json on build</p>
+            </div>
+            <a class="labs__link" href="https://github.com/robertbg/write-json-webpack-plugin">View more</a>
+          </figcaption>			
+        </figure>
+      </div>
     </section>
 
     <section class="contact" id="contact">

@@ -370,10 +370,6 @@ strong {
     width: calc(100% - 40px);
     height: calc(100%);
     content: ''; }
-  .labs strong {
-    color: #EAC60E; }
-  .labs a {
-    color: #EAC60E; }
   @media screen and (min-width: 768px) {
     .labs {
       padding: 0 20px;
@@ -384,43 +380,95 @@ strong {
   z-index: 4;
   max-width: 620px; }
 
-.labs__list {
+.labs__grid {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  list-style: none; }
+  position: relative;
+  flex-direction: column;
+  z-index: 4;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  list-style: none;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .labs__grid {
+      flex-direction: row; } }
 
 .labs__item {
   position: relative;
-  flex: 1;
-  height: 200px; }
+  margin: 10px 0;
+  background: #302D3B;
+  cursor: pointer;
+  width: 100%;
+  max-height: 360px;
+  overflow: hidden;
+  text-align: center; }
+  .labs__item:hover .labs__title {
+    transform: translate3d(0, 0, 0); }
+  .labs__item:hover .labs__image {
+    transform: translate3d(0, 0, 0);
+    opacity: .5; }
+  .labs__item:hover .labs__description {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition-delay: .05s;
+    transition-duration: .35s; }
+  @media screen and (min-width: 768px) {
+    .labs__item {
+      margin: 10px 1%;
+      width: 31%; } }
 
 .labs__image {
   display: block;
+  position: relative;
+  transform: translate3d(-40px, 0, 0);
+  transition: opacity .35s, transform .35s;
+  opacity: .3;
+  width: calc(100% + 50px);
+  min-height: 100%; }
+
+.labs__title {
+  transform: translate3d(0, 40px, 0);
+  transition: transform .35s;
+  margin: 0;
+  text-transform: uppercase; }
+
+.labs__description {
+  transform: translate3d(0, 40px, 0);
+  transition: opacity .2s, transform .35s;
+  opacity: 0;
+  margin: 0;
+  color: #FFF; }
+
+.labs__caption {
   position: absolute;
-  transition: .3s ease-out;
-  z-index: 4;
-  background-size: cover;
+  top: 0;
+  left: 0;
+  padding: 20px 20px 0;
   width: 100%;
   height: 100%;
-  filter: grayscale(100%); }
-  .labs__image::before {
+  text-align: left;
+  color: #FFF;
+  backface-visibility: hidden; }
+  .labs__caption > div {
     position: absolute;
-    top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    opacity: .2;
-    background-color: #302D3B;
-    content: ''; }
-  .labs__image:hover {
-    filter: grayscale(0%); }
+    padding: 20px 20px 10px;
+    width: 100%;
+    height: 50%; }
+  .labs__caption::before, .labs__caption::after {
+    pointer-events: none; }
 
-.labs_info {
-  position: relative;
-  z-index: 5;
-  width: 100%; }
+.labs__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  text-indent: 200%;
+  white-space: nowrap; }
 
 .contact {
   display: flex;

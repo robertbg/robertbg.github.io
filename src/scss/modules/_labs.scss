@@ -34,14 +34,6 @@
     content: '';
   }
 
-  strong {
-    color: $highlight-color;
-  }
-
-  a {
-    color: $highlight-color;
-  }
-
   @media screen and (min-width: $tablet) {
     padding: 0 20px;
     height: 600px;
@@ -54,48 +46,114 @@
   max-width: 620px;
 }
 
-.labs__list {
+.labs__grid {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  z-index: 4;
+  margin: 0 auto;
+  padding: 1em 0 4em;
   list-style: none;
+  text-align: center;
+  
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+  }
 }
 
 .labs__item {
   position: relative;
-  flex: 1;
-  height: 200px;
+  margin: 10px 0;
+  background: $dark-color;
+  cursor: pointer;
+  width: 100%;
+  max-height: 360px;
+  overflow: hidden;
+  text-align: center;
+
+  &:hover {
+    .labs__title {
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .labs__image {
+      transform: translate3d(0, 0, 0);
+      opacity: .5;
+    }
+
+    .labs__description {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      transition-delay: .05s;
+      transition-duration: .35s;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin: 10px 1%;
+    width: 31%;
+  }
 }
 
 .labs__image {
   display: block;
+  position: relative;
+  transform: translate3d(-40px, 0, 0);
+  transition: opacity .35s, transform .35s;
+  opacity: .3;
+  width: calc(100% + 50px);
+  min-height: 100%;
+}
+
+.labs__title {
+  transform: translate3d(0, 40px, 0);
+  transition: transform .35s;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.labs__description {
+  transform: translate3d(0,40px,0);
+  transition: opacity .2s, transform .35s;
+  opacity: 0;
+  margin: 0;
+  color: $light-color;
+}
+
+.labs__caption {
   position: absolute;
-  transition: .3s ease-out;
-  z-index: 4;
-  background-size: cover;
+  top: 0;
+  left: 0;
+  padding: 20px 20px 0;
   width: 100%;
   height: 100%;
-  filter: grayscale(100%);
+  text-align: left;
+  color: $light-color;
+  backface-visibility: hidden;
 
-  &::before {
+  & > div {
     position: absolute;
-    top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    opacity: .2;
-    background-color: $dark-color;
-    content: '';
+    padding: 20px 20px 10px;
+    width: 100%;
+    height: 50%;
   }
 
-  &:hover {
-    filter: grayscale(0%);
+  &::before,
+  &::after {
+    pointer-events: none;
   }
 }
 
-.labs_info {
-  position: relative;
-  z-index: 5;
+.labs__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1000;
   width: 100%;
+  height: 100%;
+  text-indent: 200%;
+  white-space: nowrap;
 }
