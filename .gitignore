@@ -1,6 +1,2 @@
 .DS_STORE
-.idea/
-.sass-cache/
-.phpintel/
-npm-debug.log
 node_modules/

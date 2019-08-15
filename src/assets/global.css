@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Montserrat|Material+Icons&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 420px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+:root {
+  --primary: #f10060;
+  --color: black;
+  --gray: #363636;
+  --light: #ddd;
+  --background-color: white;
+  --gradient: linear-gradient(
+    324deg,
+    #0032ab,
+    #6028a7,
+    #8c159f,
+    #af0093,
+    #cb0084,
+    #e10072,
+    #f10060
+  );
+  --border-width: 25px;
+}
+
+section {
+  display: block;
+}
