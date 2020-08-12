@@ -30,4 +30,5 @@ jobs:
         with:
           target-domain: "https://swapi.rbg.dev"
           project-path: "projects/swapi"
-          build-folder: "build"
+          surge-login: ${{ secrets.SURGE_LOGIN }}
+          surge-token: ${{ secrets.SURGE_TOKEN }}

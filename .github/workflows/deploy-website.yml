@@ -31,3 +31,5 @@ jobs:
           target-domain: "https://rbg.dev"
           project-path: "projects/website"
           build-folder: "dist"
+          surge-login: ${{ secrets.SURGE_LOGIN }}
+          surge-token: ${{ secrets.SURGE_TOKEN }}
