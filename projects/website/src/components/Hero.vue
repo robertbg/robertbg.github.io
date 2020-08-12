@@ -1,6 +1,8 @@
 <template>
   <section :class="$style.section">
-    <h1 :class="$style.lead">Rob BG</h1>
+    <h1 :class="$style.lead">
+      Rob BG
+    </h1>
     <ul :class="$style.typewriter">
       <li
         v-for="(text, index) in textOptions"
