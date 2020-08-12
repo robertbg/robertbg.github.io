@@ -1,1 +1,1 @@
-Home of side projects / personal site etc.
+![RBG Screenshot](./screenshot.png)
