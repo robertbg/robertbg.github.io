@@ -2,7 +2,7 @@
 @import '../../scss/colors';
 @import '../../scss/typography';
 
-$drop-shadow: rgba(0, 0, 0, .2);
+$drop-shadow: rgba(0, 0, 0, 0.2);
 
 .results {
   display: flex;
@@ -36,20 +36,11 @@ $drop-shadow: rgba(0, 0, 0, .2);
 
 .results__bg {
   position: absolute;
-  right: -90px;
+  right: 10px;
   bottom: 10px;
   width: auto;
   height: 80px;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: transparentize($base-color, .9);
-  }
-
-  &#planet {
-    right: -80px;
-  }
+  fill: transparentize($base-color, 0.9);
 }
 
 .results__title {

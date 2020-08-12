@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchItemsIfNeeded } from '../actions/items'
 import Search from '../components/Search'
@@ -36,7 +37,7 @@ class AsyncApp extends Component {
           {!isFetching && items.length === 0 && <h2>No Results</h2>}
           {items.length > 0 && <Results items={items} />}
           <div className="tagline">
-            Built and designed by <a href="https://rbg.dev">RBG</a> using React.
+            Built and designed by <a href="https://rbg.dev">RBG</a> using React.{' '}
             <a href="https://github.com/robertbg/swapi-react">
               Source code on Github
             </a>

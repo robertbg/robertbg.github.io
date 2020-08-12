@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './search.scss'
-import icon from './images/search.svg'
+import { ReactComponent as Icon } from './search.svg'
 
 const Search = (props) => {
   const { value, onChange } = props
@@ -13,10 +13,7 @@ const Search = (props) => {
         Films, Characters, Species, Starships & Planets
       </div>
       <div className="search__input">
-        <div
-          className="search__icon"
-          dangerouslySetInnerHTML={{ __html: icon }}
-        />
+        <Icon className="search__icon" />
         <input
           type="text"
           placeholder="Enter a search term"
