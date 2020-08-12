@@ -38,7 +38,7 @@ class AsyncApp extends Component {
           {items.length > 0 && <Results items={items} />}
           <div className="tagline">
             Built and designed by <a href="https://rbg.dev">RBG</a> using React.{' '}
-            <a href="https://github.com/robertbg/swapi-react">
+            <a href="https://github.com/robertbg/projects/tree/main/projects/swapi">
               Source code on Github
             </a>
             .
