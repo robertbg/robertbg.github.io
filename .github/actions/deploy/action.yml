@@ -24,8 +24,8 @@ runs:
   steps:
     - run: |
         cd ${{ inputs.project-path }}
-        npm install
-        npm run build
+        yarn install
+        yarn build
       shell: bash
     - run: npx surge ${{ inputs.project-path }}/${{inputs.build-folder}} --domain ${{inputs.target-domain}}
       shell: bash
