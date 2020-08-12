@@ -1,5 +1,5 @@
 <template>
-  <footer :class="$style.footer">&copy; {{ year }} Rob Byrne-Graham.</footer>
+  <footer :class="$style.footer">&copy; {{ year }} Rob Byrne-Graham</footer>
 </template>
 
 <script>
