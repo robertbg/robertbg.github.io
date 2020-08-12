@@ -1,0 +1,258 @@
+@import '../../scss/breakpoints';
+@import '../../scss/colors';
+
+$base: #ebf2fa;
+$stroke: #000;
+$base-tint: lighten($stroke, 80%);
+$lens: lighten($stroke, 10%);
+$lens-highlight: lighten($stroke, 20%);
+$orange: $highlight-color;
+$shadow: rgba(0, 0, 0, .4);
+$shadow-light: rgba(0, 0, 0, .2);
+
+.loader {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  @media screen and (min-width: $laptop) {
+    align-items: center;
+  }
+}
+
+.bb8 {
+  transform: scale(.5);
+  width: 220px;
+  height: 220px;
+}
+
+.bb8-body {
+  position: absolute;
+  animation: spin 1s linear infinite;
+  border: solid 8px $stroke;
+  border-radius: 50%;
+  background: $base;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border: 8px solid $stroke;
+  border-radius: 50%;
+  background-color: $orange;
+  width: 120px;
+  height: 120px;
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid $stroke;
+    border-radius: 50%;
+    background: $base;
+    width: 35%;
+    height: 35%;
+    content: '';
+  }
+}
+
+.circle-1 {
+  top: 10px;
+  left: -30px;
+}
+
+.circle-2 {
+  top: 123px;
+  left: 80px;
+}
+
+.circle-3 {
+  top: -180px;
+  left: 120px;
+  width: 300px;
+  height: 300px;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: $stroke;
+  width: 18px;
+  height: 18px;
+}
+
+.dot-1 {
+  top: 79px;
+  left: 113px;
+}
+
+.dot-2 {
+  top: 145px;
+  left: 40px;
+}
+
+.line {
+  position: absolute;
+  background: $stroke;
+  width: 100px;
+  height: 8px;
+}
+
+.line-1 {
+  top: 40px;
+  left: -70px;
+  transform: rotate(40deg);
+}
+
+.line-2 {
+  top: -45px;
+  left: -60px;
+  transform: rotate(160deg);
+}
+
+.line-3 {
+  top: 25px;
+  left: 10px;
+  transform: rotate(-60deg);
+}
+
+.body-shadow-crop {
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  border: solid 8px $stroke;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.body-shadow {
+  position: absolute;
+  top: -20px;
+  left: -50px;
+  border-radius: 50%;
+  box-shadow: 0 0 60px $shadow;
+  width: 220px;
+  height: 220px;
+}
+
+.bb8-head {
+  position: absolute;
+  top: -60px;
+  left: -30px;
+  transform: rotate(-30deg);
+  width: 160px;
+  height: 160px;
+}
+
+.head-top {
+  position: absolute;
+  border: solid 8px $stroke;
+  border-radius: 50%;
+  box-shadow: -10px 0 0 5px $shadow-light inset;
+  background: $base;
+  width: 160px;
+  height: 160px;
+}
+
+.lens {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -28px;
+  border: solid 8px $stroke;
+  border-radius: 50%;
+  background: $lens;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    transform: rotate(40deg);
+    background: $lens-highlight;
+    width: 6px;
+    height: 70px;
+    content: '';
+  }
+
+  &::after {
+    top: -10px;
+    left: 25px;
+    width: 10px;
+   }
+}
+
+.freckle {
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  border-radius: 50%;
+  background: $stroke;
+  width: 13px;
+  height: 13px;
+}
+
+.head-top-crop {
+  position: relative;
+  height: 50%;
+  overflow: hidden;
+}
+
+.head-bottom {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+.head-bottom-base,
+.head-side-1,
+.head-side-2 {
+  position: absolute;
+  border-bottom: 8px solid $stroke;
+  background: $base-tint;
+  height: 20px;
+}
+
+.head-bottom-base {
+  left: 11%;
+  width: 78%;
+}
+
+.head-side-1 {
+  top: -16px;
+  left: -3px;
+  transform: rotate(40deg);
+  border-radius: 0 0 8px 8px;
+  width: 30px;
+  transform-origin: bottom left;
+}
+
+.head-side-2 {
+  top: -16px;
+  right: -3px;
+  transform: rotate(-40deg);
+  border-radius: 0 0 8px 8px;
+  width: 30px;
+  transform-origin: bottom right;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
