@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Netlify Cleanup
+      - name: Teardown
         uses: ./.github/actions/teardown
         with:
           target-domain: ${{ env.target-domain }}
