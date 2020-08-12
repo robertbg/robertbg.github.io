@@ -1,0 +1,21 @@
+name: 'Surge Branch Teardown'
+description: 'Teardown a site from surge'
+inputs:
+  surge-login:
+    description: 'Surge email address'
+    required: true
+  surge-token:
+    description: 'Surge token'
+    required: true
+  target-domain:
+    description: 'Domain to tear down'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - run: npx surge teardown ${{inputs.target-domain}}
+      shell: bash
+      env:
+        SURGE_LOGIN: ${{ inputs.surge-login }}
+        SURGE_TOKEN: ${{ inputs.surge-token }}
