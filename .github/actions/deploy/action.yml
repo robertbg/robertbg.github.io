@@ -1,0 +1,28 @@
+name: "Surge Build & Deploy"
+description: "Deploy a site to surge"
+inputs:
+  target-domain:
+    description: "Domain to deploy to"
+    required: true
+    default: "yarn.lock"
+  project-path:
+    description: "Path to the project."
+    required: false
+    default: ""
+  build-folder:
+    description: "Path, relative to the project, to the build directory."
+    required: false
+    default: "build"
+
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        cd ${{ env.PROJECT_PATH }}
+        npm run build
+      shell: bash
+    - run: npx surge ${{ env.PROJECT_PATH }}/${{env.BUILD_FOLDER}} --domain ${{env.TARGET_DOMAIN}}
+      shell: bash
+      env:
+        SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+        SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
