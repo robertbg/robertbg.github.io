@@ -1,1 +1,3 @@
-![RBG Screenshot](./screenshot.png)
+<p align="center">
+  <img src="./screenshot.png" alt="RBG">
+</p>
