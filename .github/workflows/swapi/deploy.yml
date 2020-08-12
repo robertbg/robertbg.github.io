@@ -1,0 +1,40 @@
+name: 'Swapi Production Deploy'
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'projects/swapi/**'
+
+jobs:
+  build-deploy-package:
+    name: 'Build & Deploy'
+    env:
+      cache-key: 'swapi'
+      project-path: 'projects/swapi'
+      build-folder: 'build'
+      target-domain: 'https://swapi.rbg.dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Use Node.js 12.x'
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: 'Cache Dependencies'
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-cache-${{ env.cache-key }}-${{ hashFiles('${{ env.project-path}}/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cache-${{ env.cache-key }}-
+            ${{ runner.os }}-cache-
+      - name: 'Build & Deploy'
+        uses: ./.github/actions/deploy
+        with:
+          project-path: ${{ env.project-path}}
+          build-folder: ${{ env.build-folder }}
+          target-domain: ${{ env.target-domain }}
+          surge-login: ${{ secrets.SURGE_LOGIN }}
+          surge-token: ${{ secrets.SURGE_TOKEN }}

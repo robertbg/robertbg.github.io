@@ -1,0 +1,22 @@
+name: 'Cleanup Test Branches'
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - 'projects/website/**'
+
+jobs:
+  surge-cleanup:
+    name: 'Tidying up test branches'
+    env:
+      target-domain: 'https://site-${{ github.head_ref }}.rbg.dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Netlify Cleanup
+        uses: ./.github/actions/teardown
+        with:
+          target-domain: ${{ env.target-domain }}
+          surge-login: ${{ secrets.SURGE_LOGIN }}
+          surge-token: ${{ secrets.SURGE_TOKEN }}
